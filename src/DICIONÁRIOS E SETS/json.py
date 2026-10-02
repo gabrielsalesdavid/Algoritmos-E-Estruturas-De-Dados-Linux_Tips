@@ -28,6 +28,8 @@ for titulo in dados:
 
 dados.close() # Fecha o arquivo JSON
 
+# inserindo os dados atualizados no arquivo JSON
+
 insercao = open('src\DICIONÁRIOS E SETS\brasileirao.json', 'w', encoding='utf-8') # Abre o arquivo JSON em modo de escrita
 json.dump(dados, insercao, ensure_ascii=False, indent=4) # Salva os dados atualizados no arquivo JSON com indentação de 4 espaços e sem escapar caracteres não ASCII
 insercao.close() # Fecha o arquivo JSON
