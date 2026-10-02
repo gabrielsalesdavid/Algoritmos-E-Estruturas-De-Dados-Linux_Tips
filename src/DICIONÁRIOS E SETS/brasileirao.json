@@ -1,0 +1,606 @@
+[
+    {
+        "nome": "Flamengo",
+        "endereco": {
+            "rua": "Av. Borges de Medeiros",
+            "numero": 997,
+            "cidade": "Rio de Janeiro",
+            "estado": "RJ"
+        },
+        "titulos_brasileiros": [
+            1980,
+            1982,
+            1983,
+            1992,
+            2009,
+            2019,
+            2020,
+            2025
+        ],
+        "libertadores": 3,
+        "mundial": 1,
+        "serie": "A"
+    },
+    {
+        "nome": "Palmeiras",
+        "endereco": {
+            "rua": "Rua Palestra Itália",
+            "numero": 214,
+            "cidade": "São Paulo",
+            "estado": "SP"
+        },
+        "titulos_brasileiros": [
+            1960,
+            1967,
+            1967,
+            1969,
+            1972,
+            1973,
+            1993,
+            1994,
+            2016,
+            2018,
+            2022,
+            2023
+        ],
+        "libertadores": 3,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Cruzeiro",
+        "endereco": {
+            "rua": "Rua Timbiras",
+            "numero": 2903,
+            "cidade": "Belo Horizonte",
+            "estado": "MG"
+        },
+        "titulos_brasileiros": [
+            1966,
+            2003,
+            2013,
+            2014
+        ],
+        "libertadores": 2,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Mirassol",
+        "endereco": {
+            "rua": "Av. Lauro Luchesi",
+            "numero": 2650,
+            "cidade": "Mirassol",
+            "estado": "SP"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Fluminense",
+        "endereco": {
+            "rua": "Rua Álvaro Chaves",
+            "numero": 41,
+            "cidade": "Rio de Janeiro",
+            "estado": "RJ"
+        },
+        "titulos_brasileiros": [
+            1970,
+            1984,
+            2010,
+            2012
+        ],
+        "libertadores": 1,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Botafogo",
+        "endereco": {
+            "rua": "Av. Wenceslau Brás",
+            "numero": 72,
+            "cidade": "Rio de Janeiro",
+            "estado": "RJ"
+        },
+        "titulos_brasileiros": [
+            1968,
+            1995,
+            2024
+        ],
+        "libertadores": 1,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Bahia",
+        "endereco": {
+            "rua": "Largo da Fonte Nova",
+            "numero": 1,
+            "cidade": "Salvador",
+            "estado": "BA"
+        },
+        "titulos_brasileiros": [
+            1959,
+            1988
+        ],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "São Paulo",
+        "endereco": {
+            "rua": "Praça Roberto Gomes Pedrosa",
+            "numero": 1,
+            "cidade": "São Paulo",
+            "estado": "SP"
+        },
+        "titulos_brasileiros": [
+            1977,
+            1986,
+            1991,
+            2006,
+            2007,
+            2008
+        ],
+        "libertadores": 3,
+        "mundial": 3,
+        "serie": "A"
+    },
+    {
+        "nome": "Grêmio",
+        "endereco": {
+            "rua": "Largo Fernando Carvalho",
+            "numero": 1,
+            "cidade": "Porto Alegre",
+            "estado": "RS"
+        },
+        "titulos_brasileiros": [
+            1981,
+            1996
+        ],
+        "libertadores": 3,
+        "mundial": 1,
+        "serie": "A"
+    },
+    {
+        "nome": "Red Bull Bragantino",
+        "endereco": {
+            "rua": "Rua Emílio Colella",
+            "numero": 100,
+            "cidade": "Bragança Paulista",
+            "estado": "SP"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Atlético-MG",
+        "endereco": {
+            "rua": "Av. Olegário Maciel",
+            "numero": 1516,
+            "cidade": "Belo Horizonte",
+            "estado": "MG"
+        },
+        "titulos_brasileiros": [
+            1971,
+            2021
+        ],
+        "libertadores": 1,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Santos",
+        "endereco": {
+            "rua": "Rua Princesa Isabel",
+            "numero": 77,
+            "cidade": "Santos",
+            "estado": "SP"
+        },
+        "titulos_brasileiros": [
+            1961,
+            1962,
+            1963,
+            1964,
+            1965,
+            1968,
+            2002,
+            2004
+        ],
+        "libertadores": 3,
+        "mundial": 2,
+        "serie": "A"
+    },
+    {
+        "nome": "Corinthians",
+        "endereco": {
+            "rua": "Rua São Jorge",
+            "numero": 777,
+            "cidade": "São Paulo",
+            "estado": "SP"
+        },
+        "titulos_brasileiros": [
+            1990,
+            1998,
+            1999,
+            2005,
+            2011,
+            2015,
+            2017
+        ],
+        "libertadores": 1,
+        "mundial": 2,
+        "serie": "A"
+    },
+    {
+        "nome": "Vasco",
+        "endereco": {
+            "rua": "Rua General Almério de Moura",
+            "numero": 131,
+            "cidade": "Rio de Janeiro",
+            "estado": "RJ"
+        },
+        "titulos_brasileiros": [
+            1974,
+            1989,
+            1997,
+            2000
+        ],
+        "libertadores": 1,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Vitória",
+        "endereco": {
+            "rua": "Rua Artêmio Castro Valente",
+            "numero": 1,
+            "cidade": "Salvador",
+            "estado": "BA"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Internacional",
+        "endereco": {
+            "rua": "Av. Padre Cacique",
+            "numero": 891,
+            "cidade": "Porto Alegre",
+            "estado": "RS"
+        },
+        "titulos_brasileiros": [
+            1975,
+            1976,
+            1979
+        ],
+        "libertadores": 2,
+        "mundial": 1,
+        "serie": "A"
+    },
+    {
+        "nome": "Athletico-PR",
+        "endereco": {
+            "rua": "Rua Buenos Aires",
+            "numero": 1260,
+            "cidade": "Curitiba",
+            "estado": "PR"
+        },
+        "titulos_brasileiros": [
+            2001
+        ],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Coritiba",
+        "endereco": {
+            "rua": "Rua Ubaldino do Amaral",
+            "numero": 37,
+            "cidade": "Curitiba",
+            "estado": "PR"
+        },
+        "titulos_brasileiros": [
+            1985
+        ],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Chapecoense",
+        "endereco": {
+            "rua": "Rua Clevelândia",
+            "numero": 656,
+            "cidade": "Chapecó",
+            "estado": "SC"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Remo",
+        "endereco": {
+            "rua": "Av. Almirante Barroso",
+            "numero": 800,
+            "cidade": "Belém",
+            "estado": "PA"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "A"
+    },
+    {
+        "nome": "Ceará",
+        "endereco": {
+            "rua": "Av. João Pessoa",
+            "numero": 3532,
+            "cidade": "Fortaleza",
+            "estado": "CE"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Fortaleza",
+        "endereco": {
+            "rua": "Av. Senador Fernandes Távora",
+            "numero": 200,
+            "cidade": "Fortaleza",
+            "estado": "CE"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Juventude",
+        "endereco": {
+            "rua": "Rua Hércules Galló",
+            "numero": 1547,
+            "cidade": "Caxias do Sul",
+            "estado": "RS"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Sport",
+        "endereco": {
+            "rua": "Praça da Bandeira",
+            "numero": 254,
+            "cidade": "Recife",
+            "estado": "PE"
+        },
+        "titulos_brasileiros": [
+            1987
+        ],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Londrina",
+        "endereco": {
+            "rua": "Av. Jorge Casoni",
+            "numero": 1900,
+            "cidade": "Londrina",
+            "estado": "PR"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "São Bernardo",
+        "endereco": {
+            "rua": "Rua Ministro Laudo de Camargo",
+            "numero": 270,
+            "cidade": "São Bernardo do Campo",
+            "estado": "SP"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Ponte Preta",
+        "endereco": {
+            "rua": "Praça Dr. Francisco Ursaia",
+            "numero": 1900,
+            "cidade": "Campinas",
+            "estado": "SP"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Náutico",
+        "endereco": {
+            "rua": "Av. Conselheiro Rosa e Silva",
+            "numero": 1086,
+            "cidade": "Recife",
+            "estado": "PE"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Goiás",
+        "endereco": {
+            "rua": "Av. Edmundo Pinheiro de Abreu",
+            "numero": 721,
+            "cidade": "Goiânia",
+            "estado": "GO"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Novorizontino",
+        "endereco": {
+            "rua": "Av. José Willibaldo de Freitas",
+            "numero": 1,
+            "cidade": "Novo Horizonte",
+            "estado": "SP"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Avaí",
+        "endereco": {
+            "rua": "Rua Cota da Rocha",
+            "numero": 267,
+            "cidade": "Florianópolis",
+            "estado": "SC"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Vila Nova",
+        "endereco": {
+            "rua": "Rua 256",
+            "numero": 120,
+            "cidade": "Goiânia",
+            "estado": "GO"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Cuiabá",
+        "endereco": {
+            "rua": "Av. Agrícola Paes de Barros",
+            "numero": 1,
+            "cidade": "Cuiabá",
+            "estado": "MT"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "CRB",
+        "endereco": {
+            "rua": "Rua Antônio Vieira",
+            "numero": 100,
+            "cidade": "Maceió",
+            "estado": "AL"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Atlético-GO",
+        "endereco": {
+            "rua": "Rua T-43",
+            "numero": 300,
+            "cidade": "Goiânia",
+            "estado": "GO"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "América-MG",
+        "endereco": {
+            "rua": "Av. dos Andradas",
+            "numero": 3000,
+            "cidade": "Belo Horizonte",
+            "estado": "MG"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Ferroviária",
+        "endereco": {
+            "rua": "Rua Mauro Pinheiro",
+            "numero": 150,
+            "cidade": "Araraquara",
+            "estado": "SP"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Operário-PR",
+        "endereco": {
+            "rua": "Rua Padre Nóbrega",
+            "numero": 265,
+            "cidade": "Ponta Grossa",
+            "estado": "PR"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Botafogo-SP",
+        "endereco": {
+            "rua": "Av. Costábile Romano",
+            "numero": 3200,
+            "cidade": "Ribeirão Preto",
+            "estado": "SP"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    },
+    {
+        "nome": "Paysandu",
+        "endereco": {
+            "rua": "Av. Almirante Barroso",
+            "numero": 654,
+            "cidade": "Belém",
+            "estado": "PA"
+        },
+        "titulos_brasileiros": [],
+        "libertadores": 0,
+        "mundial": 0,
+        "serie": "B"
+    }
+]

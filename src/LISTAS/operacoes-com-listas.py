@@ -23,10 +23,10 @@ fe = [22, 33, 44, 55, 66]
 
 contador = 0
 
-for numMega in mega:
-    for numFe in fe:
-         if numMega == numFe:
-             print(f"{numMega} está em ambas as listas")
+for num_mega in mega:
+    for num_fe in fe:
+         if num_mega == num_fe:
+             print(f"{num_mega} está em ambas as listas")
              contador += 1
 
 print(f"Total de elementos em comum: {contador}")

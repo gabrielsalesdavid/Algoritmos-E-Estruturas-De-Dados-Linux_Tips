@@ -6,5 +6,7 @@ pessoa = {
     "cidade": "São Paulo"},
     {"nome": "Bob",
     "idade": 25,
-    "cidade": "Rio de Janeiro"},
+    "cidade": "Rio de Janeiro"}
 }
+
+print(pessoa["nome"])  # Acessando o valor associado à chave "nome"
