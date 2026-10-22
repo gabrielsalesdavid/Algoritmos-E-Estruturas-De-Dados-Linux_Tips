@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Pilha LIFO</title>
+  <desc id="desc">Diagrama de uma pilha com topo, operação push para inserir e pop para remover o último item inserido.</desc>
+  <rect width="900" height="360" rx="18" fill="#f4f7fb"/>
+  <text x="450" y="48" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#183153">Pilha — LIFO</text>
+  <text x="450" y="78" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#42566f">Last In, First Out: o último que entra é o primeiro que sai</text>
+  <text x="345" y="120" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#183153">TOPO</text>
+  <path d="M360 114h35" stroke="#183153" stroke-width="3"/>
+  <path d="m390 106 12 8-12 8" fill="none" stroke="#183153" stroke-width="3"/>
+  <rect x="410" y="94" width="180" height="54" rx="8" fill="#b9e3ff" stroke="#2676a8" stroke-width="2"/>
+  <rect x="410" y="154" width="180" height="54" rx="8" fill="#d3e9f8" stroke="#2676a8" stroke-width="2"/>
+  <rect x="410" y="214" width="180" height="54" rx="8" fill="#e5eef5" stroke="#2676a8" stroke-width="2"/>
+  <text x="500" y="129" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#183153">C — entrou por último</text>
+  <text x="500" y="189" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#183153">B</text>
+  <text x="500" y="249" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#183153">A — base</text>
+  <path d="M650 243V126" stroke="#15803d" stroke-width="4"/>
+  <path d="m640 137 10-14 10 14" fill="none" stroke="#15803d" stroke-width="4"/>
+  <text x="682" y="178" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#166534">push(item)</text>
+  <text x="682" y="202" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#166534">adiciona no topo</text>
+  <path d="M250 126v117" stroke="#b42318" stroke-width="4"/>
+  <path d="m240 232 10 14 10-14" fill="none" stroke="#b42318" stroke-width="4"/>
+  <text x="225" y="174" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#9f1d16">pop()</text>
+  <text x="225" y="198" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#9f1d16">remove do topo</text>
+  <text x="450" y="320" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#52657a">Implementação didática em src/PILHA E FILA/pilha.py</text>
+</svg>

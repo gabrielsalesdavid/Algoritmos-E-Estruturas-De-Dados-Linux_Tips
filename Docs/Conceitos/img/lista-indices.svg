@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">Índices de uma lista Python</title>
+  <desc id="desc">Uma lista com os valores maçã, pera e uva nos índices zero, um e dois, e o índice negativo menos um apontando para uva.</desc>
+  <rect width="900" height="300" rx="18" fill="#f4f7fb"/>
+  <text x="450" y="50" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="700" fill="#183153">Listas: posições e índices</text>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <rect x="205" y="105" width="160" height="66" rx="8" fill="#dceeff" stroke="#2676a8" stroke-width="2"/>
+    <rect x="370" y="105" width="160" height="66" rx="8" fill="#dceeff" stroke="#2676a8" stroke-width="2"/>
+    <rect x="535" y="105" width="160" height="66" rx="8" fill="#dceeff" stroke="#2676a8" stroke-width="2"/>
+    <text x="285" y="146" font-size="19" fill="#183153">"maçã"</text>
+    <text x="450" y="146" font-size="19" fill="#183153">"pera"</text>
+    <text x="615" y="146" font-size="19" fill="#183153">"uva"</text>
+    <text x="285" y="204" font-size="17" fill="#52657a">índice 0</text>
+    <text x="450" y="204" font-size="17" fill="#52657a">índice 1</text>
+    <text x="615" y="204" font-size="17" fill="#52657a">índice 2 / -1</text>
+  </g>
+  <path d="M615 227v24" stroke="#b42318" stroke-width="3"/>
+  <path d="m607 242 8 12 8-12" fill="none" stroke="#b42318" stroke-width="3"/>
+  <text x="615" y="277" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#9f1d16">-1 acessa o último item</text>
+</svg>

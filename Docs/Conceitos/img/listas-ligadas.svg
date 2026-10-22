@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" role="img" aria-labelledby="title desc">
+  <title id="title">Listas ligadas</title>
+  <desc id="desc">Comparação entre lista simplesmente ligada, com uma seta para próximo, e duplamente ligada, com setas nos dois sentidos.</desc>
+  <rect width="1000" height="440" rx="18" fill="#f4f7fb"/>
+  <text x="500" y="48" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#183153">Nós e referências em listas ligadas</text>
+  <text x="45" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#183153">Simples</text>
+  <text x="45" y="138" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#52657a">cada nó aponta para o próximo</text>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <rect x="220" y="91" width="135" height="64" rx="8" fill="#d9f2e6" stroke="#21845a" stroke-width="2"/>
+    <rect x="425" y="91" width="135" height="64" rx="8" fill="#d9f2e6" stroke="#21845a" stroke-width="2"/>
+    <rect x="630" y="91" width="135" height="64" rx="8" fill="#d9f2e6" stroke="#21845a" stroke-width="2"/>
+    <text x="287" y="130" font-size="17" fill="#183153">dado | próximo</text>
+    <text x="492" y="130" font-size="17" fill="#183153">dado | próximo</text>
+    <text x="697" y="130" font-size="17" fill="#183153">dado | None</text>
+  </g>
+  <path d="M355 123h60" stroke="#183153" stroke-width="3"/>
+  <path d="m405 115 12 8-12 8" fill="none" stroke="#183153" stroke-width="3"/>
+  <path d="M560 123h60" stroke="#183153" stroke-width="3"/>
+  <path d="m610 115 12 8-12 8" fill="none" stroke="#183153" stroke-width="3"/>
+  <text x="45" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#183153">Dupla</text>
+  <text x="45" y="256" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#52657a">cada nó aponta para ambos os vizinhos</text>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <rect x="220" y="207" width="155" height="70" rx="8" fill="#e9ddff" stroke="#7043a5" stroke-width="2"/>
+    <rect x="425" y="207" width="155" height="70" rx="8" fill="#e9ddff" stroke="#7043a5" stroke-width="2"/>
+    <rect x="630" y="207" width="155" height="70" rx="8" fill="#e9ddff" stroke="#7043a5" stroke-width="2"/>
+    <text x="297" y="250" font-size="17" fill="#183153">anterior | dado | próximo</text>
+    <text x="502" y="250" font-size="17" fill="#183153">anterior | dado | próximo</text>
+    <text x="707" y="250" font-size="17" fill="#183153">anterior | dado | próximo</text>
+  </g>
+  <path d="M375 226h42" stroke="#183153" stroke-width="3"/>
+  <path d="m405 218 12 8-12 8" fill="none" stroke="#183153" stroke-width="3"/>
+  <path d="M417 258h-42" stroke="#7043a5" stroke-width="3"/>
+  <path d="m387 250-12 8 12 8" fill="none" stroke="#7043a5" stroke-width="3"/>
+  <path d="M580 226h42" stroke="#183153" stroke-width="3"/>
+  <path d="m610 218 12 8-12 8" fill="none" stroke="#183153" stroke-width="3"/>
+  <path d="M622 258h-42" stroke="#7043a5" stroke-width="3"/>
+  <path d="m592 250-12 8 12 8" fill="none" stroke="#7043a5" stroke-width="3"/>
+  <text x="500" y="342" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#52657a">A cabeça referencia o primeiro nó; a cauda (na lista dupla) referencia o último.</text>
+  <text x="500" y="390" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#52657a">Diagramas conceituais dos exemplos em src/LISTAS LIGADAS/</text>
+</svg>

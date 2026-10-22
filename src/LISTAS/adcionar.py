@@ -1,20 +1,22 @@
+# print() exibe uma mensagem literal, incluindo caracteres Unicode.
 print("🛒 BEM-VINDO AO SISTEMA DE CARRINHO DINÂMICO 🛒")
 
-# 1. Iniciamos nossa lista vazia (um carrinho de compras pronto para ser preenchido)
+# Colchetes vazios criam uma lista vazia; ela receberá os produtos.
 carrinho = []
 
 # --- FASE 1: INSERÇÃO DINÂMICA ---
-# Criamos um loop infinito para o usuário digitar quantos itens quiser
+# while True cria um laço contínuo; break será usado para sair dele.
 while True:
+    # input() mostra a solicitação e retorna o texto digitado pelo usuário.
     produto = input("Digite o nome do produto (ou '0' para finalizar): ")
     
-    # Nossa condição de parada. Se digitar '0', o break quebra o loop!
+    # if verifica a condição; == compara strings; break encerra o laço mais interno.
     if produto == '0':
         print("\nFinalizando as compras... Gerando o recibo...\n")
         break
         # exit()  # Poderíamos usar exit() para encerrar o programa, mas vamos apenas quebrar o loop
         
-    # Se não quebrou o loop, adicionamos o produto no final da lista
+    # Se a condição de parada não ocorreu, append() acrescenta o texto à lista.
     carrinho.append(produto)
     print(produto + " adicionado com sucesso!")
 
@@ -22,22 +24,22 @@ while True:
 # --- FASE 2: ITERAÇÃO E LEITURA ---
 print("🧾 SEU RECIBO DE COMPRAS 🧾")
 
-# Verificamos se o usuário comprou algo (se o tamanho da lista é maior que zero)
+# len() retorna a quantidade; == 0 testa se a lista está vazia.
 if len(carrinho) == 0:
     print("Seu carrinho está tristemente vazio. Vá comprar algo!")
 else:
-    # Criamos nossa variável contadora que servirá como Índice
+    # else executa quando a condição do if é falsa; i servirá como índice.
     i = 0
     
-    # O loop vai rodar do índice 0 até o último índice válido (tamanho da lista - 1)
+    # O laço continua enquanto i for menor que o tamanho da lista.
     while i < len(carrinho):
-        # Acessamos o elemento da lista usando a variável 'i'
+        # Colchetes acessam o item na posição i (índices começam em zero).
         item_atual = carrinho[i]
         
-        # Imprimimos de forma amigável para humanos (índice + 1)
+        # str() converte i+1 para texto antes da concatenação com outras strings.
         print("Item " + str(i + 1) + ": " + item_atual)
         
-        # A engrenagem vital do loop: aumentamos o índice para ir ao próximo vagão
+        # += atualiza i somando 1, permitindo avançar para o próximo item.
         i += 1
 
 print("\nObrigado por usar nosso sistema!")
