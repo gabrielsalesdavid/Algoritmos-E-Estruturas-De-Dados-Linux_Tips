@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="410" viewBox="0 0 980 410" role="img" aria-labelledby="title desc">
+  <title id="title">Como escolher uma coleção</title>
+  <desc id="desc">Três cartões com perguntas simples que ajudam a escolher entre lista, conjunto e dicionário.</desc>
+  <rect width="980" height="410" rx="20" fill="#f4f7fb"/>
+  <text x="490" y="55" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700" fill="#183153">Qual coleção combina com a tarefa?</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="45" y="105" width="280" height="230" rx="16" fill="#dceeff" stroke="#2676a8" stroke-width="3"/>
+    <text x="185" y="151" text-anchor="middle" font-size="25" font-weight="700" fill="#183153">LISTA</text>
+    <text x="185" y="193" text-anchor="middle" font-size="18" fill="#183153">A ordem importa?</text>
+    <text x="185" y="225" text-anchor="middle" font-size="18" fill="#183153">Pode haver repetidos?</text>
+    <text x="185" y="277" text-anchor="middle" font-size="17" fill="#52657a">Ex.: itens de um carrinho</text>
+    <text x="185" y="306" text-anchor="middle" font-size="15" fill="#52657a">Acesso por posição: [0], [1]...</text>
+
+    <rect x="350" y="105" width="280" height="230" rx="16" fill="#d9f2e6" stroke="#21845a" stroke-width="3"/>
+    <text x="490" y="151" text-anchor="middle" font-size="25" font-weight="700" fill="#183153">CONJUNTO</text>
+    <text x="490" y="193" text-anchor="middle" font-size="18" fill="#183153">Quer evitar repetidos?</text>
+    <text x="490" y="225" text-anchor="middle" font-size="18" fill="#183153">Quer comparar grupos?</text>
+    <text x="490" y="277" text-anchor="middle" font-size="17" fill="#52657a">Ex.: etiquetas únicas</text>
+    <text x="490" y="306" text-anchor="middle" font-size="15" fill="#52657a">Sem acesso por posição</text>
+
+    <rect x="655" y="105" width="280" height="230" rx="16" fill="#e9ddff" stroke="#7043a5" stroke-width="3"/>
+    <text x="795" y="151" text-anchor="middle" font-size="25" font-weight="700" fill="#183153">DICIONÁRIO</text>
+    <text x="795" y="193" text-anchor="middle" font-size="18" fill="#183153">Precisa localizar por nome?</text>
+    <text x="795" y="225" text-anchor="middle" font-size="18" fill="#183153">Cada nome tem um valor?</text>
+    <text x="795" y="277" text-anchor="middle" font-size="17" fill="#52657a">Ex.: nome → telefone</text>
+    <text x="795" y="306" text-anchor="middle" font-size="15" fill="#52657a">Acesso pela chave: ["nome"]</text>
+  </g>
+  <text x="490" y="380" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#52657a">Não existe uma opção melhor para tudo: escolha pelo tipo de consulta que o programa precisa fazer.</text>
+</svg>

@@ -22,6 +22,37 @@ Este repositório reúne exercícios introdutórios de **Python**, **algoritmos*
 
 É um projeto de estudos em evolução — não um pacote pronto para produção. Alguns exercícios ainda têm limitações conhecidas, que estão descritas com transparência neste README para que iniciantes possam reconhecê-las e praticar a correção.
 
+## 📖 O que você vai aprender, explicado com calma
+
+Este material foi pensado para quem está começando. Não é necessário conhecer os nomes técnicos antes de abrir os exemplos: a ideia é observar uma situação simples, ver como Python a representa e, então, praticar.
+
+| Tema | Em palavras simples | Onde praticar |
+| --- | --- | --- |
+| **Variáveis e valores** | Dar um nome a um dado, como `idade = 20`, para poder usá-lo depois. Números, textos e valores verdadeiro/falso têm tipos diferentes. | [Exemplo de listas e tipos](src/LISTAS/listas.py) |
+| **Listas e posições** | Guardar vários itens em ordem. A primeira posição é `0`; por isso, o terceiro item fica no índice `2`. | [Índices](src/LISTAS/listas.py), [tamanho](src/LISTAS/tamanho-listas.py), [adicionar](src/LISTAS/adicionar-elementos.py), [remover](src/LISTAS/remover.py) |
+| **Condições** | Fazer o programa escolher o que fazer: por exemplo, mostrar uma mensagem diferente se a lista estiver vazia. | [Operações com listas](src/LISTAS/operacoes-com-listas.py), [carrinho interativo](src/LISTAS/adcionar.py) |
+| **Repetições** | Repetir uma ação para cada item (`for`) ou enquanto uma regra continuar verdadeira (`while`). | [Laço `for`](src/LISTAS/loop-for.py), [tamanho e `while`](src/LISTAS/tamanho-listas.py) |
+| **Listas e matrizes** | Uma lista pode conter outras listas, como linhas e colunas de um tabuleiro ou de uma tabela. | [Matrizes](src/LISTAS/matrizes.py) |
+| **Conjuntos** | Guardar valores sem repeti-los e comparar grupos, por exemplo para encontrar elementos comuns. | [Conjuntos (`set`)](<src/DICIONÁRIOS E SETS/sets.py>) |
+| **Dicionários** | Guardar informações com rótulos: `"nome"` aponta para um nome, `"cidade"` aponta para uma cidade. | [Dicionários em listas](<src/DICIONÁRIOS E SETS/dicioanrios-listas.py>) |
+| **JSON e arquivos** | Ler dados guardados em um arquivo, trabalhar com eles como listas e dicionários e gravar mudanças. | [Exemplo JSON](<src/DICIONÁRIOS E SETS/json-exemplo.py>) |
+| **Pilha** | Guardar itens de modo que o último colocado seja o primeiro a sair, como pratos empilhados. | [Pilha LIFO](<src/PILHA E FILA/pilhas.py>) |
+| **Listas ligadas** | Conectar elementos por referências; cada elemento sabe onde está o próximo (e, na versão dupla, o anterior). | [Lista simples](<src/LISTAS LIGADAS/listas-simples-ligadas.py>), [lista dupla](<src/LISTAS LIGADAS/listas-duplamente-ligadas.py>) |
+| **Recursão** | Resolver uma tarefa com chamadas menores da mesma função até chegar a uma condição que manda parar. | [Contagem regressiva](<src/RECURSÃO/recursao.py>), [departamentos](<src/RECURSÃO/caso-recursivo.py>) |
+| **Crescimento do trabalho** | Comparar se uma tarefa continua simples ou exige cada vez mais passos conforme a quantidade de dados aumenta. | [Guia de conceitos](Docs/Conceitos/CONCEITOS.md#6-notação-o) |
+
+### As ideias em imagens
+
+As figuras abaixo são desenhos originais deste repositório para explicar as ideias sem exigir que a pessoa já conheça os termos:
+
+![Escolha entre lista, conjunto e dicionário](Docs/Conceitos/img/escolha-colecao.svg)
+
+![Passo a passo da recursão com contagem regressiva](Docs/Conceitos/img/recursao-passo-a-passo.svg)
+
+![Como os dados passam do arquivo JSON para Python e de volta](Docs/Conceitos/img/leitura-json.svg)
+
+As figuras de [índices](Docs/Conceitos/img/lista-indices.svg), [listas ligadas](Docs/Conceitos/img/listas-ligadas.svg) e [pilha](Docs/Conceitos/img/pilha-lifo.svg) complementam os exemplos correspondentes.
+
 ### O que você vai encontrar
 
 | Fundamentos de Python | Estruturas de dados |
@@ -188,10 +219,25 @@ Os exercícios ainda têm limitações descritas acima; execute somente depois d
 
 ## 📚 Documentação
 
-- **[Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md):** sintaxe, variáveis, tipos, operadores, coleções, funções, classes, arquivos, recursão e custos intuitivos.
-- **[Conceitos de algoritmos e estruturas de dados](Docs/Conceitos/CONCEITOS.md):** organização de dados, listas ligadas, pilhas, filas, recursão e notação O.
+- **[Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md):** guia passo a passo de nomes e valores, tipos, listas, conjuntos, dicionários, condições, repetições, funções, classes, arquivos JSON, recursão, pilhas e crescimento do trabalho.
+- **[Conceitos de algoritmos e estruturas de dados](Docs/Conceitos/CONCEITOS.md):** explica em linguagem simples como escolher coleções, como listas ligadas guardam conexões, como funcionam pilhas e filas, o que acontece durante a recursão e como entender O(1), O(n), O(n²) e O(log n).
 - **Comentários no código:** os 20 arquivos `.py` em `src/` incluem explicações em português das sintaxes e operações estudadas.
-- **Diagramas:** os SVGs em `Docs/Conceitos/img/` ajudam a visualizar pilhas, listas ligadas e índices.
+- **Diagramas:** os SVGs em `Docs/Conceitos/img/` ilustram índices, coleções, listas ligadas, pilhas, recursão e leitura/gravação JSON.
+
+## ✅ O que foi detalhado e ajustado nesta revisão
+
+1. **Explicações ampliadas para iniciantes:** os guias agora explicam a ideia antes de apresentar o nome técnico, mostram exemplos pequenos e dizem o que cada parte do código faz.
+2. **Sintaxe Python:** foram acrescentadas explicações de atribuição (`=`) e comparação (`==`), tipos e conversões, chamadas de funções, índices, f-strings, condições, laços, `break` e `continue`.
+3. **Coleções:** a documentação compara listas, conjuntos e dicionários, mostra quando cada um é útil e explica como combiná-los, como numa lista de dicionários.
+4. **Estruturas de dados:** foram descritas as diferenças entre lista Python, lista simplesmente ligada, lista duplamente ligada, pilha e fila; a documentação também esclarece que ainda não há exemplo de fila no código.
+5. **Recursão:** os guias agora descrevem a condição de parada, as chamadas que ficam aguardando, o retorno dessas chamadas e o risco de chamar a função indefinidamente.
+6. **Notação de crescimento:** foram adicionadas comparações em termos de quantidade de passos para explicar O(1), O(n), O(n²) e O(log n), sem tratar esses símbolos como tempo em segundos.
+7. **Arquivos JSON:** foi explicado o trajeto do arquivo até as estruturas Python e de volta, inclusive o efeito de gravar em modo `"w"` (substituir o conteúdo anterior).
+8. **Novas figuras:** foram criados desenhos para comparar coleções, acompanhar a contagem recursiva e visualizar a leitura/gravação JSON. Eles se juntam aos diagramas de índices, pilhas e listas ligadas.
+9. **Organização e exemplos:** o índice do README aponta para os exemplos atuais, inclusive os exercícios de recursão e o arquivo `json-exemplo.py`.
+10. **Correções de sintaxe e execução:** o método `__str__` da classe `Pilha` foi colocado no nível correto da classe. O exemplo JSON foi renomeado para não esconder o módulo padrão `json`; seus caminhos agora são localizados ao lado do script com `pathlib`, os arquivos são fechados com `with` e a alteração dos títulos não se repete em cada execução.
+
+As mudanças de código foram verificadas com compilação dos arquivos Python e testes dos exemplos da pilha e JSON. O JSON de exemplo foi testado usando cópias temporárias para preservar o arquivo original.
 
 ### Verificação de sintaxe
 

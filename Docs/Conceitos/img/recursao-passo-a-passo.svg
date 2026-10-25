@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="440" viewBox="0 0 980 440" role="img" aria-labelledby="title desc">
+  <title id="title">Passos de uma contagem regressiva recursiva</title>
+  <desc id="desc">A função chama a si mesma com números menores até zero, para no caso-base e termina as chamadas pendentes.</desc>
+  <rect width="980" height="440" rx="20" fill="#f4f7fb"/>
+  <text x="490" y="52" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#183153">Recursão: diminuir, parar e voltar</text>
+  <text x="490" y="89" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#52657a">contagem_regressiva(n) chama contagem_regressiva(n - 1)</text>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <rect x="45" y="130" width="125" height="82" rx="12" fill="#dceeff" stroke="#2676a8" stroke-width="2"/>
+    <rect x="225" y="130" width="125" height="82" rx="12" fill="#dceeff" stroke="#2676a8" stroke-width="2"/>
+    <rect x="405" y="130" width="125" height="82" rx="12" fill="#dceeff" stroke="#2676a8" stroke-width="2"/>
+    <rect x="585" y="130" width="125" height="82" rx="12" fill="#dceeff" stroke="#2676a8" stroke-width="2"/>
+    <rect x="765" y="130" width="165" height="82" rx="12" fill="#fde4df" stroke="#b42318" stroke-width="2"/>
+    <text x="107" y="165" font-size="17" fill="#183153">chamada</text><text x="107" y="191" font-size="23" font-weight="700" fill="#183153">5</text>
+    <text x="287" y="165" font-size="17" fill="#183153">chamada</text><text x="287" y="191" font-size="23" font-weight="700" fill="#183153">4</text>
+    <text x="467" y="165" font-size="17" fill="#183153">chamada</text><text x="467" y="191" font-size="23" font-weight="700" fill="#183153">3</text>
+    <text x="647" y="165" font-size="17" fill="#183153">chamada</text><text x="647" y="191" font-size="23" font-weight="700" fill="#183153">2 ... 1</text>
+    <text x="847" y="165" font-size="17" fill="#9f1d16">caso-base</text><text x="847" y="191" font-size="23" font-weight="700" fill="#9f1d16">0: parar</text>
+  </g>
+  <path d="M170 171h48m-12-8 12 8-12 8M350 171h48m-12-8 12 8-12 8M530 171h48m-12-8 12 8-12 8M710 171h48m-12-8 12 8-12 8" fill="none" stroke="#183153" stroke-width="3"/>
+  <text x="490" y="255" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#183153">As chamadas ficam aguardando na pilha:</text>
+  <g font-family="Consolas, monospace" font-size="17" text-anchor="middle">
+    <rect x="285" y="280" width="410" height="42" rx="8" fill="#fff" stroke="#7043a5" stroke-width="2"/>
+    <rect x="315" y="326" width="350" height="42" rx="8" fill="#fff" stroke="#7043a5" stroke-width="2"/>
+    <rect x="345" y="372" width="290" height="42" rx="8" fill="#fff" stroke="#7043a5" stroke-width="2"/>
+    <text x="490" y="307" fill="#183153">chamada com 5</text>
+    <text x="490" y="353" fill="#183153">chamada com 4</text>
+    <text x="490" y="399" fill="#183153">... volta após chegar ao caso-base</text>
+  </g>
+</svg>
