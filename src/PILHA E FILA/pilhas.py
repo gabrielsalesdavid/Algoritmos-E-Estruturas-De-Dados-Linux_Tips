@@ -26,7 +26,6 @@ class Pilha:
             # O índice `-1` acessa o último item; `return` o devolve sem removê-lo.
             return self.items[-1]
         else:
-            # else cobre o caso em que a condição do if é falsa.
             raise IndexError("peek from an empty stack")
 
     def is_empty(self):
@@ -38,5 +37,17 @@ class Pilha:
         return len(self.items)
 
     def append(self, item):
-        # append() é chamado por meio do ponto e recebe item como argumento.
+        # Adiciona o item ao final da deque, que representa o topo da pilha.
         self.items.append(item)
+
+    def __str__(self):
+        # `__str__` define a representação em string da pilha; `join` concatena os itens.
+        return "Pilha: [" + ", ".join(map(str, self.items)) + "]"
+
+nova_pilha = Pilha()
+nova_pilha.push(1)
+nova_pilha.push(2)
+print(nova_pilha.pop())  # Saída: 2
+print(nova_pilha.peek())  # Saída: 1
+print(nova_pilha.is_empty())  # Saída: False
+print(nova_pilha)  # Saída: Pilha: [1]

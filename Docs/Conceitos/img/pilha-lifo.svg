@@ -21,5 +21,5 @@
   <path d="m240 232 10 14 10-14" fill="none" stroke="#b42318" stroke-width="4"/>
   <text x="225" y="174" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#9f1d16">pop()</text>
   <text x="225" y="198" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#9f1d16">remove do topo</text>
-  <text x="450" y="320" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#52657a">Implementação didática em src/PILHA E FILA/pilha.py</text>
+  <text x="450" y="320" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#52657a">Implementação didática em src/PILHA E FILA/pilhas.py</text>
 </svg>

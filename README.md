@@ -28,8 +28,8 @@ Este repositório reúne exercícios introdutórios de **Python**, **algoritmos*
 | --- | --- |
 | Variáveis, tipos e operadores | Listas e matrizes |
 | Condições e laços `for` / `while` | Conjuntos e dicionários |
-| Funções, classes, métodos e `self` | Pilha com `deque` |
-| Listas de compreensão e f-strings | Listas simplesmente e duplamente ligadas |
+| Funções, classes, métodos e `self` | Pilha LIFO com `deque` |
+| Recursão, pilha de chamadas e f-strings | Listas simplesmente e duplamente ligadas |
 | Arquivos e módulo `json` | Busca, inserção e remoção |
 
 ## 🧭 Trilha de aprendizagem
@@ -38,9 +38,10 @@ Uma ordem sugerida para explorar o conteúdo:
 
 1. **Conheça as sequências:** [listas e índices](src/LISTAS/listas.py), [tamanho](src/LISTAS/tamanho-listas.py), [adição](src/LISTAS/adicionar-elementos.py) e [remoção](src/LISTAS/remover.py).
 2. **Pratique a lógica:** [laço `for`](src/LISTAS/loop-for.py), [operações e filtros](src/LISTAS/operacoes-com-listas.py), [matrizes](src/LISTAS/matrizes.py) e [entrada interativa](src/LISTAS/adcionar.py).
-3. **Explore coleções:** [conjuntos (`set`)](src/DICION%C3%81RIOS%20E%20SETS/sets.py), [dicionários](src/DICION%C3%81RIOS%20E%20SETS/dicionarios.py), [listas de dicionários](src/DICION%C3%81RIOS%20E%20SETS/dicioanrios-listas.py) e [JSON](src/DICION%C3%81RIOS%20E%20SETS/json.py).
-4. **Entenda estruturas ligadas:** [pilha LIFO](src/PILHA%20E%20FILA/pilha.py), [lista simplesmente ligada](src/LISTAS%20LIGADAS/listas-simples-ligadas.py) e [lista duplamente ligada](src/LISTAS%20LIGADAS/listas-duplamente-ligadas.py).
-5. **Aprofunde os conceitos:** leia [Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md) e use os diagramas desta página como apoio visual.
+3. **Explore coleções:** [conjuntos (`set`)](src/DICION%C3%81RIOS%20E%20SETS/sets.py), [dicionários](src/DICION%C3%81RIOS%20E%20SETS/dicionarios.py), [listas de dicionários](src/DICION%C3%81RIOS%20E%20SETS/dicioanrios-listas.py) e [JSON](<src/DICIONÁRIOS E SETS/json-exemplo.py>).
+4. **Entenda estruturas ligadas e pilhas:** [pilha LIFO](<src/PILHA E FILA/pilhas.py>), [lista simplesmente ligada](<src/LISTAS LIGADAS/listas-simples-ligadas.py>) e [lista duplamente ligada](<src/LISTAS LIGADAS/listas-duplamente-ligadas.py>).
+5. **Explore recursão:** [contagem regressiva](<src/RECURSÃO/recursao.py>), [caso-base](<src/RECURSÃO/caso-base.py>), [árvore de departamentos](<src/RECURSÃO/caso-recursivo.py>) e [pilha de chamadas](<src/RECURSÃO/pilha-de-chamads.py>).
+6. **Aprofunde os conceitos:** consulte [Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md), [Conceitos de algoritmos e estruturas de dados](Docs/Conceitos/CONCEITOS.md) e os diagramas visuais.
 
 > **Dica para iniciantes:** leia primeiro os comentários, execute um exemplo por vez e experimente alterar os dados de entrada. Quando um arquivo tiver uma limitação conhecida, consulte [Antes de executar todos os exemplos](#-antes-de-executar-todos-os-exemplos).
 
@@ -51,6 +52,7 @@ Uma ordem sugerida para explorar o conteúdo:
 ├── README.md
 ├── Docs/
 │   ├── Conceitos/
+│   │   ├── CONCEITOS.md         # Estruturas, recursão e notação O
 │   │   └── img/                 # Diagramas conceituais em SVG
 │   └── Fundamentos/
 │       └── FUNDAMENTOS.md       # Guia de sintaxe e estruturas
@@ -58,7 +60,8 @@ Uma ordem sugerida para explorar o conteúdo:
     ├── DICIONÁRIOS E SETS/      # set, dict, JSON e dados de exemplo
     ├── LISTAS/                  # listas, matrizes, iteração e operações
     ├── LISTAS LIGADAS/          # listas simplesmente e duplamente ligadas
-    └── PILHA E FILA/            # exemplo de pilha com deque
+    ├── PILHA E FILA/            # exemplo de pilha com deque
+    └── RECURSÃO/                # casos-base, recursão e chamadas de funções
 ```
 
 ### Índice completo dos exemplos
@@ -87,7 +90,7 @@ Uma ordem sugerida para explorar o conteúdo:
 | [`sets.py`](<src/DICIONÁRIOS E SETS/sets.py>) | Conjuntos, união, interseção e diferenças |
 | [`dicionarios.py`](<src/DICIONÁRIOS E SETS/dicionarios.py>) | Dicionários e acesso por chave |
 | [`dicioanrios-listas.py`](<src/DICIONÁRIOS E SETS/dicioanrios-listas.py>) | Lista de dicionários, iteração e f-strings |
-| [`json.py`](<src/DICIONÁRIOS E SETS/json.py>) | Leitura e gravação de dados JSON |
+| [`json-exemplo.py`](<src/DICIONÁRIOS E SETS/json-exemplo.py>) | Leitura e gravação de dados JSON com `pathlib` |
 | [`brasileirao.json`](<src/DICIONÁRIOS E SETS/brasileirao.json>) | Dados usados pelo exercício de JSON |
 
 </details>
@@ -97,9 +100,22 @@ Uma ordem sugerida para explorar o conteúdo:
 
 | Exemplo | Conceitos |
 | --- | --- |
-| [`pilha.py`](<src/PILHA E FILA/pilha.py>) | Classe, `__init__`, `self`, métodos e pilha LIFO |
+| [`pilhas.py`](<src/PILHA E FILA/pilhas.py>) | Classe, `__init__`, `self`, métodos e pilha LIFO com `deque` |
 | [`listas-simples-ligadas.py`](<src/LISTAS LIGADAS/listas-simples-ligadas.py>) | Nós, referências, busca, inserção e remoção |
 | [`listas-duplamente-ligadas.py`](<src/LISTAS LIGADAS/listas-duplamente-ligadas.py>) | Referências anterior/próximo, cabeça e cauda |
+
+</details>
+
+<details>
+<summary><strong>Recursão e chamadas de funções</strong></summary>
+
+| Exemplo | Conceitos |
+| --- | --- |
+| [`recursao.py`](<src/RECURSÃO/recursao.py>) | Caso-base e contagem regressiva |
+| [`caso-base.py`](<src/RECURSÃO/caso-base.py>) | Redução da entrada até a condição de parada |
+| [`caso-recursivo.py`](<src/RECURSÃO/caso-recursivo.py>) | Percurso recursivo de uma árvore de departamentos |
+| [`pilha-de-chamads.py`](<src/RECURSÃO/pilha-de-chamads.py>) | Funções encadeadas e pilha de chamadas |
+| [`pilha-recursiva.py`](<src/RECURSÃO/pilha-recursiva.py>) | Dicionários aninhados e consulta de categoria; não usa recursão |
 
 </details>
 
@@ -151,7 +167,7 @@ python "src\LISTAS\loop-for.py"
 Outro exemplo, que demonstra uma classe de pilha:
 
 ```powershell
-python "src\PILHA E FILA\pilha.py"
+python "src\PILHA E FILA\pilhas.py"
 ```
 
 Execute **um arquivo por vez**: cada exercício é independente. O exemplo [`adcionar.py`](src/LISTAS/adcionar.py) pede que você digite produtos no terminal; informe `0` para encerrar a entrada.
@@ -163,18 +179,23 @@ Os exemplos refletem o estado atual do material de estudo. Alguns contêm trecho
 | Arquivo | O que observar |
 | --- | --- |
 | [`dicionarios.py`](<src/DICIONÁRIOS E SETS/dicionarios.py>) | O literal tenta usar dicionários dentro de um conjunto. Dicionários são mutáveis e não podem ser elementos de um conjunto; a expressão falha antes do acesso por chave. |
-| [`json.py`](<src/DICIONÁRIOS E SETS/json.py>) | `json.load()` devolve os dados, não o arquivo. Assim, `dados.close()` não fecha o arquivo. Além disso, `append()` modifica a lista e retorna `None`; atribuir esse retorno à chave deixa seu valor como `None`. O caminho do JSON é relativo ao diretório de execução. |
+| [`json-exemplo.py`](<src/DICIONÁRIOS E SETS/json-exemplo.py>) | O exemplo atualiza os títulos do Palmeiras e grava o resultado no JSON de exemplo. A operação pode ser repetida sem duplicar o novo título, mas altera o arquivo; faça uma cópia se quiser preservar os dados originais. |
 | [`adicionar-elementos.py`](src/LISTAS/adicionar-elementos.py) | Listas não têm método `push()`. A chamada gera `AttributeError` e interrompe o script nesse ponto. |
 | [`tamanho-listas.py`](src/LISTAS/tamanho-listas.py) | `i` não é inicializada e `t_numeros` é um inteiro; portanto, o acesso `t_numeros[i]` não funciona. |
 | [`sets.py`](<src/DICIONÁRIOS E SETS/sets.py>) | Os nomes `ordered_ascending`/`ordered_descending` não correspondem aos valores de `reverse`: `True` indica ordem reversa (decrescente). |
 
-Esses pontos estão documentados para fins didáticos; este README não afirma que os exemplos foram corrigidos.
+Os exercícios ainda têm limitações descritas acima; execute somente depois de entendê-las. O exemplo JSON grava os dados que modifica, então preserve uma cópia se necessário.
 
 ## 📚 Documentação
 
-- **[Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md):** variáveis, tipos, operadores, listas, conjuntos, dicionários, condições, laços, funções, classes, arquivos e complexidade intuitiva.
-- **Comentários no código:** os 15 arquivos `.py` em `src/` incluem explicações em português das sintaxes e operações estudadas.
+- **[Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md):** sintaxe, variáveis, tipos, operadores, coleções, funções, classes, arquivos, recursão e custos intuitivos.
+- **[Conceitos de algoritmos e estruturas de dados](Docs/Conceitos/CONCEITOS.md):** organização de dados, listas ligadas, pilhas, filas, recursão e notação O.
+- **Comentários no código:** os 20 arquivos `.py` em `src/` incluem explicações em português das sintaxes e operações estudadas.
 - **Diagramas:** os SVGs em `Docs/Conceitos/img/` ajudam a visualizar pilhas, listas ligadas e índices.
+
+### Verificação de sintaxe
+
+Os arquivos Python foram compilados com Python 3.12 para verificar a sintaxe (`python -m compileall -q src`). A compilação não executa os exemplos nem garante que todos funcionem: consulte a tabela de limitações acima antes de rodá-los.
 
 ## 🎯 Objetivos de aprendizagem
 

@@ -108,7 +108,7 @@ else:
 
 ## 6. Laços e iteração
 
-`for elemento in iteravel:` percorre os valores de uma sequência ou outro iterável. `range(inicio, limite, passo)` produz uma sequência de inteiros: o início é incluído, o limite é excluído e o passo é opcional.
+`for elemento in iteravel:` percorre os valores de uma sequência ou outro iterável. `range(inicio, limite, passo)` produz uma sequência de inteiros: o início é incluído, o limite é excluído e o passo é opcional. `input()` sempre devolve texto (`str`); converta para `int` ou `float` antes de fazer cálculos numéricos.
 
 `while condição:` repete o bloco enquanto a condição for verdadeira. É importante atualizar o estado usado pela condição para evitar um laço infinito. `break` encerra o laço mais próximo; `return` encerra a função atual.
 
@@ -158,11 +158,24 @@ O módulo padrão `json` converte entre texto JSON e objetos Python:
 
 Para código novo, um bloco `with open(...) as arquivo:` é preferível porque fecha o arquivo automaticamente ao sair do bloco.
 
-## 10. Estruturas de dados do repositório
+O módulo `pathlib` ajuda a formar caminhos independentes do sistema operacional. Por exemplo, `Path(__file__).with_name("brasileirao.json")` localiza um arquivo ao lado do script atual. Isso evita depender da pasta em que o comando foi iniciado e de barras invertidas em strings.
+
+## 10. Recursão e pilha de chamadas
+
+Recursão acontece quando uma função chama a si mesma para resolver uma versão menor do problema. Toda recursão precisa de:
+
+1. **Caso-base:** condição que encerra as chamadas.
+2. **Caso recursivo:** chamada que aproxima a entrada do caso-base.
+
+Por exemplo, `contagem_regressiva(n)` imprime `n` e chama `contagem_regressiva(n - 1)` até `n <= 0`. A cada chamada, o Python guarda o contexto na pilha de chamadas; quando o caso-base retorna, os contextos são removidos em ordem inversa. Se as chamadas não chegarem ao caso-base, o programa pode terminar com `RecursionError`.
+
+Os exemplos `caso-base.py` e `caso-recursivo.py` mostram recursão com uma sequência de bonecas e uma árvore de departamentos. `pilha-de-chamads.py` mostra chamadas de funções encadeadas e a pilha de chamadas. Apesar do nome, `pilha-recursiva.py` consulta dicionários aninhados sem chamar a própria função; é um exemplo de acesso condicional a categorias.
+
+## 11. Estruturas de dados do repositório
 
 ### Pilha (LIFO)
 
-LIFO significa *Last In, First Out*: o último elemento inserido é o primeiro removido. O exemplo `src/PILHA E FILA/pilha.py` guarda itens em `collections.deque`; `push()` acrescenta ao topo, `pop()` remove o topo e `peek()` consulta sem remover.
+LIFO significa *Last In, First Out*: o último elemento inserido é o primeiro removido. O exemplo `src/PILHA E FILA/pilhas.py` guarda itens em `collections.deque`; `push()` acrescenta ao topo, `pop()` remove o topo e `peek()` consulta sem remover. A pasta menciona fila, mas ainda não há uma implementação de fila nos exemplos.
 
 ### Lista simplesmente ligada
 
@@ -187,15 +200,16 @@ Cada nó guarda referências `proximo` e `anterior`. A lista também mantém `ca
 
 `O(...)` descreve como o trabalho cresce com o tamanho dos dados, não o tempo exato de execução.
 
-## 11. Mapa dos exemplos
+## 12. Mapa dos exemplos
 
 - **Listas:** `src/LISTAS/listas.py`, `tamanho-listas.py`, `adicionar-elementos.py`, `remover.py`.
 - **Laços e lógica:** `src/LISTAS/loop-for.py`, `operacoes-com-listas.py`, `adcionar.py`.
 - **Matrizes:** `src/LISTAS/matrizes.py`.
 - **Conjuntos:** `src/DICIONÁRIOS E SETS/sets.py`.
 - **Dicionários e coleções combinadas:** `src/DICIONÁRIOS E SETS/dicionarios.py`, `dicioanrios-listas.py`.
-- **JSON:** `src/DICIONÁRIOS E SETS/json.py` e `brasileirao.json`.
-- **Pilha:** `src/PILHA E FILA/pilha.py`.
+- **JSON:** `src/DICIONÁRIOS E SETS/json-exemplo.py` e `brasileirao.json`.
+- **Pilha:** `src/PILHA E FILA/pilhas.py`.
 - **Listas ligadas:** `src/LISTAS LIGADAS/listas-simples-ligadas.py` e `listas-duplamente-ligadas.py`.
+- **Recursão e chamadas:** `src/RECURSÃO/recursao.py`, `caso-base.py`, `caso-recursivo.py`, `pilha-de-chamads.py` e `pilha-recursiva.py`.
 
 Comentários nos arquivos-fonte explicam a sintaxe e a intenção local de cada trecho; este documento reúne os conceitos e o contexto para estudo.
