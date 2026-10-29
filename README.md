@@ -76,6 +76,33 @@ Uma ordem sugerida para explorar o conteúdo:
 
 > **Dica para iniciantes:** leia primeiro os comentários, execute um exemplo por vez e experimente alterar os dados de entrada. Quando um arquivo tiver uma limitação conhecida, consulte [Antes de executar todos os exemplos](#-antes-de-executar-todos-os-exemplos).
 
+### Como escolher uma coleção ou estrutura
+
+Cada estrutura organiza os dados de um jeito diferente. A escolha depende do tipo de operação que o programa precisa realizar com mais frequência:
+
+| Estrutura | Como organiza os dados | Quando é útil | Atenção |
+| --- | --- | --- | --- |
+| **Lista (`list`)** | Mantém os itens em sequência e permite repetições. Cada item pode ser acessado por um índice. | Guardar uma coleção ordenada, percorrer itens ou alterar uma posição. | Os índices começam em `0`. Procurar um valor que não está em uma posição conhecida exige percorrer a lista. |
+| **Conjunto (`set`)** | Mantém elementos únicos, sem uma posição fixa para cada item. | Remover duplicatas, verificar pertencimento ou comparar grupos com união e interseção. | Não use um conjunto quando a posição ou a repetição dos itens for importante. |
+| **Dicionário (`dict`)** | Associa uma chave a um valor, como `"nome"` a `"Ana"`. | Consultar informações por um identificador, como o nome de uma propriedade. | As chaves precisam ser únicas e hashable (por exemplo, textos e números; listas não podem ser usadas como chaves). |
+| **Lista ligada** | Cada nó guarda um valor e uma referência para outro nó; na versão dupla, também guarda a referência anterior. | Estudar como conexões entre elementos podem ser representadas e percorridas. | É uma estrutura implementada nos exemplos para fins didáticos; listas Python já oferecem operações próprias para uso cotidiano. |
+| **Pilha** | Segue a regra LIFO: o último item inserido é o primeiro removido. | Modelar ações como desfazer operações ou acompanhar chamadas de funções. | O exemplo usa `deque` como base e apresenta operações de pilha; ele não implementa uma fila. |
+
+Uma forma simples de decidir é perguntar: **preciso de posições, de itens únicos ou de uma consulta por chave?** Para posições, considere uma lista; para unicidade e operações entre grupos, um conjunto; para relacionar identificadores e informações, um dicionário. Pilhas e listas ligadas aparecem nos exemplos para explorar regras e referências específicas.
+
+### Como interpretar a eficiência de um algoritmo
+
+A notação **O (Big O)** descreve como o trabalho de um algoritmo tende a crescer quando aumenta a quantidade de dados. Ela não é uma medida de segundos: o tempo real também depende do computador, da linguagem, da implementação e dos dados de entrada.
+
+| Notação | Ideia aproximada | Exemplo de situação |
+| --- | --- | --- |
+| **O(1)** | O número de passos permanece aproximadamente constante quando a coleção cresce. | Acessar uma posição conhecida de uma lista. |
+| **O(log n)** | O trabalho cresce lentamente porque, a cada etapa, o espaço de busca pode ser reduzido. | Uma busca que divide repetidamente um conjunto ordenado ao meio. |
+| **O(n)** | O trabalho cresce junto com a quantidade de itens. | Percorrer uma lista inteira para procurar um valor. |
+| **O(n²)** | O trabalho pode crescer proporcionalmente ao quadrado da quantidade de itens. | Comparar cada item com todos os demais usando dois laços aninhados. |
+
+Essas situações são exemplos conceituais, não uma classificação automática de todos os arquivos deste repositório. A notação depende da operação analisada e das condições do algoritmo: por exemplo, a busca que reduz o espaço pela metade pressupõe dados ordenados e uma implementação adequada.
+
 ## 🗺️ Organização do repositório
 
 ```text
@@ -224,18 +251,29 @@ Os exercícios ainda têm limitações descritas acima; execute somente depois d
 - **Comentários no código:** os 20 arquivos `.py` em `src/` incluem explicações em português das sintaxes e operações estudadas.
 - **Diagramas:** os SVGs em `Docs/Conceitos/img/` ilustram índices, coleções, listas ligadas, pilhas, recursão e leitura/gravação JSON.
 
-## ✅ O que foi detalhado e ajustado nesta revisão
+## 🔗 Como os assuntos se conectam
 
-1. **Explicações ampliadas para iniciantes:** os guias agora explicam a ideia antes de apresentar o nome técnico, mostram exemplos pequenos e dizem o que cada parte do código faz.
-2. **Sintaxe Python:** foram acrescentadas explicações de atribuição (`=`) e comparação (`==`), tipos e conversões, chamadas de funções, índices, f-strings, condições, laços, `break` e `continue`.
-3. **Coleções:** a documentação compara listas, conjuntos e dicionários, mostra quando cada um é útil e explica como combiná-los, como numa lista de dicionários.
-4. **Estruturas de dados:** foram descritas as diferenças entre lista Python, lista simplesmente ligada, lista duplamente ligada, pilha e fila; a documentação também esclarece que ainda não há exemplo de fila no código.
-5. **Recursão:** os guias agora descrevem a condição de parada, as chamadas que ficam aguardando, o retorno dessas chamadas e o risco de chamar a função indefinidamente.
-6. **Notação de crescimento:** foram adicionadas comparações em termos de quantidade de passos para explicar O(1), O(n), O(n²) e O(log n), sem tratar esses símbolos como tempo em segundos.
-7. **Arquivos JSON:** foi explicado o trajeto do arquivo até as estruturas Python e de volta, inclusive o efeito de gravar em modo `"w"` (substituir o conteúdo anterior).
-8. **Novas figuras:** foram criados desenhos para comparar coleções, acompanhar a contagem recursiva e visualizar a leitura/gravação JSON. Eles se juntam aos diagramas de índices, pilhas e listas ligadas.
-9. **Organização e exemplos:** o índice do README aponta para os exemplos atuais, inclusive os exercícios de recursão e o arquivo `json-exemplo.py`.
-10. **Correções de sintaxe e execução:** o método `__str__` da classe `Pilha` foi colocado no nível correto da classe. O exemplo JSON foi renomeado para não esconder o módulo padrão `json`; seus caminhos agora são localizados ao lado do script com `pathlib`, os arquivos são fechados com `with` e a alteração dos títulos não se repete em cada execução.
+Os tópicos do repositório formam uma sequência: primeiro, os valores são guardados em coleções; depois, o programa percorre e transforma esses dados; por fim, diferentes estruturas e estratégias mostram maneiras de organizar ou processar as informações.
+
+1. **Dados e coleções:** listas, conjuntos e dicionários oferecem formas diferentes de guardar valores. Entender suas diferenças ajuda a escolher como representar uma situação.
+2. **Algoritmos sobre coleções:** condições e repetições permitem selecionar, contar e transformar os itens. Índices e tamanho ajudam a controlar o acesso sem ultrapassar os limites da lista.
+3. **Estruturas com regras próprias:** pilhas e listas ligadas demonstram como operações e referências determinam a forma de inserir, localizar e remover elementos.
+4. **Recursão:** uma função divide a tarefa em chamadas menores. O caso-base define quando parar, e as chamadas pendentes ficam registradas na pilha de chamadas.
+5. **Eficiência:** a notação O ajuda a discutir como o trabalho muda com a quantidade de dados. Ela complementa a leitura do código, mas não substitui a análise da operação específica.
+
+Ao comparar uma lista Python com uma lista ligada, por exemplo, observe que ambas podem representar uma sequência, mas guardam e percorrem seus elementos de maneiras diferentes. Uma pilha, por sua vez, descreve uma regra de uso — inserir e remover pelo topo — e pode ser construída sobre outra estrutura, como o `deque` usado no exemplo.
+
+## 🧪 Um método para estudar cada exemplo
+
+Para transformar a leitura em prática, experimente seguir estes passos em cada arquivo:
+
+1. **Leia o objetivo e os comentários.** Identifique quais dados entram, qual operação será demonstrada e o que o programa deve mostrar.
+2. **Preveja o resultado.** Antes de executar, anote a saída esperada ou o estado que a coleção terá depois de cada operação.
+3. **Execute somente aquele arquivo.** Use os comandos da seção [Comece a praticar](#-comece-a-praticar) e observe a saída no terminal.
+4. **Altere uma coisa de cada vez.** Troque valores, acrescente um item ou mude uma condição; execute novamente para descobrir como isso afeta o resultado.
+5. **Explique o comportamento com suas palavras.** Pergunte-se por que o índice começa em zero, qual condição encerra o laço ou o que acontece quando uma pilha fica vazia.
+
+Se a saída não for a prevista, compare o estado dos dados antes e depois de cada linha relevante. Esse processo ajuda a localizar a operação que mudou o resultado e é mais informativo do que executar todos os exemplos ao mesmo tempo.
 
 As mudanças de código foram verificadas com compilação dos arquivos Python e testes dos exemplos da pilha e JSON. O JSON de exemplo foi testado usando cópias temporárias para preservar o arquivo original.
 
@@ -252,10 +290,6 @@ Ao explorar os exemplos, a pessoa iniciante pode praticar como:
 - Percorrer dados com laços e filtrá-los com condições.
 - Representar estruturas de dados com nós e referências.
 - Relacionar o código a diagramas e explicar operações de inserção, busca e remoção.
-
-## 🔄 Atualização da documentação
-
-Quando novos exemplos forem adicionados ou os atuais forem alterados, o índice, os conceitos e os avisos desta página e de [Fundamentos](Docs/Fundamentos/FUNDAMENTOS.md) devem acompanhar o código. Não há monitoramento automático do repositório em segundo plano; durante futuras alterações solicitadas nesta conversa, a documentação poderá ser atualizada junto com a implementação.
 
 ---
 
