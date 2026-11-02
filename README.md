@@ -37,6 +37,7 @@ Este material foi pensado para quem está começando. Não é necessário conhec
 | **Dicionários** | Guardar informações com rótulos: `"nome"` aponta para um nome, `"cidade"` aponta para uma cidade. | [Dicionários em listas](<src/DICIONÁRIOS E SETS/dicioanrios-listas.py>) |
 | **JSON e arquivos** | Ler dados guardados em um arquivo, trabalhar com eles como listas e dicionários e gravar mudanças. | [Exemplo JSON](<src/DICIONÁRIOS E SETS/json-exemplo.py>) |
 | **Pilha** | Guardar itens de modo que o último colocado seja o primeiro a sair, como pratos empilhados. | [Pilha LIFO](<src/PILHA E FILA/pilhas.py>) |
+| **Fila** | Atender itens na ordem em que chegaram: o primeiro colocado é o primeiro a sair. | [Fila FIFO](<src/PILHA E FILA/fila.py>) |
 | **Listas ligadas** | Conectar elementos por referências; cada elemento sabe onde está o próximo (e, na versão dupla, o anterior). | [Lista simples](<src/LISTAS LIGADAS/listas-simples-ligadas.py>), [lista dupla](<src/LISTAS LIGADAS/listas-duplamente-ligadas.py>) |
 | **Recursão** | Resolver uma tarefa com chamadas menores da mesma função até chegar a uma condição que manda parar. | [Contagem regressiva](<src/RECURSÃO/recursao.py>), [departamentos](<src/RECURSÃO/caso-recursivo.py>) |
 | **Crescimento do trabalho** | Comparar se uma tarefa continua simples ou exige cada vez mais passos conforme a quantidade de dados aumenta. | [Guia de conceitos](Docs/Conceitos/CONCEITOS.md#6-notação-o) |
@@ -59,7 +60,7 @@ As figuras de [índices](Docs/Conceitos/img/lista-indices.svg), [listas ligadas]
 | --- | --- |
 | Variáveis, tipos e operadores | Listas e matrizes |
 | Condições e laços `for` / `while` | Conjuntos e dicionários |
-| Funções, classes, métodos e `self` | Pilha LIFO com `deque` |
+| Funções, classes, métodos e `self` | Pilha LIFO e fila FIFO com `deque` |
 | Recursão, pilha de chamadas e f-strings | Listas simplesmente e duplamente ligadas |
 | Arquivos e módulo `json` | Busca, inserção e remoção |
 
@@ -70,7 +71,7 @@ Uma ordem sugerida para explorar o conteúdo:
 1. **Conheça as sequências:** [listas e índices](src/LISTAS/listas.py), [tamanho](src/LISTAS/tamanho-listas.py), [adição](src/LISTAS/adicionar-elementos.py) e [remoção](src/LISTAS/remover.py).
 2. **Pratique a lógica:** [laço `for`](src/LISTAS/loop-for.py), [operações e filtros](src/LISTAS/operacoes-com-listas.py), [matrizes](src/LISTAS/matrizes.py) e [entrada interativa](src/LISTAS/adcionar.py).
 3. **Explore coleções:** [conjuntos (`set`)](src/DICION%C3%81RIOS%20E%20SETS/sets.py), [dicionários](src/DICION%C3%81RIOS%20E%20SETS/dicionarios.py), [listas de dicionários](src/DICION%C3%81RIOS%20E%20SETS/dicioanrios-listas.py) e [JSON](<src/DICIONÁRIOS E SETS/json-exemplo.py>).
-4. **Entenda estruturas ligadas e pilhas:** [pilha LIFO](<src/PILHA E FILA/pilhas.py>), [lista simplesmente ligada](<src/LISTAS LIGADAS/listas-simples-ligadas.py>) e [lista duplamente ligada](<src/LISTAS LIGADAS/listas-duplamente-ligadas.py>).
+4. **Entenda pilhas, filas e estruturas ligadas:** [pilha LIFO](<src/PILHA E FILA/pilhas.py>), [fila FIFO](<src/PILHA E FILA/fila.py>), [lista simplesmente ligada](<src/LISTAS LIGADAS/listas-simples-ligadas.py>) e [lista duplamente ligada](<src/LISTAS LIGADAS/listas-duplamente-ligadas.py>).
 5. **Explore recursão:** [contagem regressiva](<src/RECURSÃO/recursao.py>), [caso-base](<src/RECURSÃO/caso-base.py>), [árvore de departamentos](<src/RECURSÃO/caso-recursivo.py>) e [pilha de chamadas](<src/RECURSÃO/pilha-de-chamads.py>).
 6. **Aprofunde os conceitos:** consulte [Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md), [Conceitos de algoritmos e estruturas de dados](Docs/Conceitos/CONCEITOS.md) e os diagramas visuais.
 
@@ -86,7 +87,8 @@ Cada estrutura organiza os dados de um jeito diferente. A escolha depende do tip
 | **Conjunto (`set`)** | Mantém elementos únicos, sem uma posição fixa para cada item. | Remover duplicatas, verificar pertencimento ou comparar grupos com união e interseção. | Não use um conjunto quando a posição ou a repetição dos itens for importante. |
 | **Dicionário (`dict`)** | Associa uma chave a um valor, como `"nome"` a `"Ana"`. | Consultar informações por um identificador, como o nome de uma propriedade. | As chaves precisam ser únicas e hashable (por exemplo, textos e números; listas não podem ser usadas como chaves). |
 | **Lista ligada** | Cada nó guarda um valor e uma referência para outro nó; na versão dupla, também guarda a referência anterior. | Estudar como conexões entre elementos podem ser representadas e percorridas. | É uma estrutura implementada nos exemplos para fins didáticos; listas Python já oferecem operações próprias para uso cotidiano. |
-| **Pilha** | Segue a regra LIFO: o último item inserido é o primeiro removido. | Modelar ações como desfazer operações ou acompanhar chamadas de funções. | O exemplo usa `deque` como base e apresenta operações de pilha; ele não implementa uma fila. |
+| **Pilha** | Segue a regra LIFO: o último item inserido é o primeiro removido. | Modelar ações como desfazer operações ou acompanhar chamadas de funções. | O exemplo usa `deque` como base e apresenta operações de pilha. |
+| **Fila** | Segue a regra FIFO: o primeiro item inserido é o primeiro removido. | Processar tarefas ou atendimentos na ordem de chegada. | O exemplo usa `deque`, adiciona itens no final e remove pelo começo. |
 
 Uma forma simples de decidir é perguntar: **preciso de posições, de itens únicos ou de uma consulta por chave?** Para posições, considere uma lista; para unicidade e operações entre grupos, um conjunto; para relacionar identificadores e informações, um dicionário. Pilhas e listas ligadas aparecem nos exemplos para explorar regras e referências específicas.
 
@@ -118,7 +120,7 @@ Essas situações são exemplos conceituais, não uma classificação automátic
     ├── DICIONÁRIOS E SETS/      # set, dict, JSON e dados de exemplo
     ├── LISTAS/                  # listas, matrizes, iteração e operações
     ├── LISTAS LIGADAS/          # listas simplesmente e duplamente ligadas
-    ├── PILHA E FILA/            # exemplo de pilha com deque
+    ├── PILHA E FILA/            # exemplos de pilha LIFO e fila FIFO com deque
     └── RECURSÃO/                # casos-base, recursão e chamadas de funções
 ```
 
@@ -159,6 +161,7 @@ Essas situações são exemplos conceituais, não uma classificação automátic
 | Exemplo | Conceitos |
 | --- | --- |
 | [`pilhas.py`](<src/PILHA E FILA/pilhas.py>) | Classe, `__init__`, `self`, métodos e pilha LIFO com `deque` |
+| [`fila.py`](<src/PILHA E FILA/fila.py>) | Fila FIFO com `deque`, inserção no final e remoção no começo |
 | [`listas-simples-ligadas.py`](<src/LISTAS LIGADAS/listas-simples-ligadas.py>) | Nós, referências, busca, inserção e remoção |
 | [`listas-duplamente-ligadas.py`](<src/LISTAS LIGADAS/listas-duplamente-ligadas.py>) | Referências anterior/próximo, cabeça e cauda |
 
@@ -228,6 +231,12 @@ Outro exemplo, que demonstra uma classe de pilha:
 python "src\PILHA E FILA\pilhas.py"
 ```
 
+Para observar uma fila FIFO:
+
+```powershell
+python "src\PILHA E FILA\fila.py"
+```
+
 Execute **um arquivo por vez**: cada exercício é independente. O exemplo [`adcionar.py`](src/LISTAS/adcionar.py) pede que você digite produtos no terminal; informe `0` para encerrar a entrada.
 
 ## ⚠️ Antes de executar todos os exemplos
@@ -246,9 +255,9 @@ Os exercícios ainda têm limitações descritas acima; execute somente depois d
 
 ## 📚 Documentação
 
-- **[Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md):** guia passo a passo de nomes e valores, tipos, listas, conjuntos, dicionários, condições, repetições, funções, classes, arquivos JSON, recursão, pilhas e crescimento do trabalho.
+- **[Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md):** guia passo a passo de nomes e valores, tipos, listas, conjuntos, dicionários, condições, repetições, funções, classes, arquivos JSON, recursão, pilhas, filas e crescimento do trabalho.
 - **[Conceitos de algoritmos e estruturas de dados](Docs/Conceitos/CONCEITOS.md):** explica em linguagem simples como escolher coleções, como listas ligadas guardam conexões, como funcionam pilhas e filas, o que acontece durante a recursão e como entender O(1), O(n), O(n²) e O(log n).
-- **Comentários no código:** os 20 arquivos `.py` em `src/` incluem explicações em português das sintaxes e operações estudadas.
+- **Comentários no código:** os 21 arquivos `.py` em `src/` incluem explicações em português das sintaxes e operações estudadas.
 - **Diagramas:** os SVGs em `Docs/Conceitos/img/` ilustram índices, coleções, listas ligadas, pilhas, recursão e leitura/gravação JSON.
 
 ## 🔗 Como os assuntos se conectam

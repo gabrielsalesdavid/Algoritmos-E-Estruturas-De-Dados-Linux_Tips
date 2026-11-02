@@ -267,7 +267,11 @@ Recursão é uma forma de organizar a solução, não a única forma de resolver
 
 ### Pilha (LIFO)
 
-LIFO significa *Last In, First Out*: o último elemento inserido é o primeiro removido. O exemplo `src/PILHA E FILA/pilhas.py` guarda itens em `collections.deque`; `push()` acrescenta ao topo, `pop()` remove o topo e `peek()` consulta sem remover. A pasta menciona fila, mas ainda não há uma implementação de fila nos exemplos.
+LIFO significa *Last In, First Out*: o último elemento inserido é o primeiro removido. O exemplo `src/PILHA E FILA/pilhas.py` guarda itens em `collections.deque`; `push()` acrescenta ao topo, `pop()` remove o topo e `peek()` consulta sem remover.
+
+### Fila (FIFO)
+
+FIFO significa *First In, First Out*: o primeiro elemento inserido é o primeiro removido. Em `src/PILHA E FILA/fila.py`, a classe `Fila` usa `collections.deque`; `enqueue()` acrescenta ao final, `dequeue()` remove e devolve o elemento do começo, e `peek()` consulta o próximo elemento sem removê-lo. `dequeue()` gera `IndexError` se a fila estiver vazia; `peek()` retorna `None` nesse caso.
 
 ### Lista simplesmente ligada
 
@@ -286,6 +290,7 @@ Cada nó guarda referências `proximo` e `anterior`. A lista também mantém `ca
 | Lista: acrescentar no final | O(1) amortizado | `append()` geralmente acrescenta sem percorrer a lista |
 | Conjunto: testar pertinência | O(1) médio | Usa hash; há casos de colisão |
 | Pilha sobre `deque`: inserir/remover no topo | O(1) | Operações em uma extremidade |
+| Fila sobre `deque`: inserir no final/remover no começo | O(1) | Operações em extremidades diferentes |
 | Lista ligada: buscar valor | O(n) | Percorre os nós sequencialmente |
 | Lista simplesmente ligada: inserir no final | O(n) neste exemplo | Percorre do início porque não mantém referência de cauda |
 | Lista duplamente ligada: inserir no final | O(1) neste exemplo | Usa a referência `cauda` |
@@ -304,7 +309,7 @@ Dois laços um dentro do outro podem comparar cada item de uma lista com cada it
 - **Conjuntos:** `src/DICIONÁRIOS E SETS/sets.py`.
 - **Dicionários e coleções combinadas:** `src/DICIONÁRIOS E SETS/dicionarios.py`, `dicioanrios-listas.py`.
 - **JSON:** `src/DICIONÁRIOS E SETS/json-exemplo.py` e `brasileirao.json`.
-- **Pilha:** `src/PILHA E FILA/pilhas.py`.
+- **Pilha e fila:** `src/PILHA E FILA/pilhas.py` e `src/PILHA E FILA/fila.py`.
 - **Listas ligadas:** `src/LISTAS LIGADAS/listas-simples-ligadas.py` e `listas-duplamente-ligadas.py`.
 - **Recursão e chamadas:** `src/RECURSÃO/recursao.py`, `caso-base.py`, `caso-recursivo.py`, `pilha-de-chamads.py` e `pilha-recursiva.py`.
 
