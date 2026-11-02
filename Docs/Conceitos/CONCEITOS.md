@@ -51,6 +51,8 @@ Uma **pilha** segue LIFO (*Last In, First Out*): o último item inserido é o pr
 
 Uma **fila** segue FIFO (*First In, First Out*): o primeiro elemento inserido é o primeiro removido. No exemplo [`fila.py`](<../../src/PILHA E FILA/fila.py>), `enqueue()` coloca itens no final e `dequeue()` retira o item do começo. Como a implementação usa `collections.deque`, essas operações nas extremidades são eficientes. `peek()` consulta o próximo item sem removê-lo.
 
+![Fila FIFO: enqueue no final e dequeue na frente](img/fila-fifo.svg)
+
 Uma fila lembra uma fila de atendimento: pessoas entram no final e a próxima pessoa atendida sai do começo. Já a pilha lembra uma pilha de pratos: o último colocado fica por cima e é o primeiro que pode ser retirado. O nome dessas regras indica a ordem em que os elementos saem; não descreve uma fila ou uma pilha física.
 
 No código da pilha, `deque` é o recipiente usado por baixo. A classe `Pilha` oferece nomes que explicam as ações (`push`, `pop`, `peek`) e impede a remoção/leitura de uma pilha vazia com um erro explícito.

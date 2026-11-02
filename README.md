@@ -52,6 +52,8 @@ As figuras abaixo são desenhos originais deste repositório para explicar as id
 
 ![Como os dados passam do arquivo JSON para Python e de volta](Docs/Conceitos/img/leitura-json.svg)
 
+![Como uma fila FIFO recebe itens no final e remove pelo começo](Docs/Conceitos/img/fila-fifo.svg)
+
 As figuras de [índices](Docs/Conceitos/img/lista-indices.svg), [listas ligadas](Docs/Conceitos/img/listas-ligadas.svg) e [pilha](Docs/Conceitos/img/pilha-lifo.svg) complementam os exemplos correspondentes.
 
 ### O que você vai encontrar
@@ -189,6 +191,14 @@ Os diagramas são **ilustrações conceituais** das estruturas, não capturas de
 <br>
 
 ![Diagrama conceitual de pilha: push e pop](Docs/Conceitos/img/pilha-lifo.svg)
+
+</details>
+
+<details>
+<summary><strong>Ver diagrama da fila (FIFO)</strong></summary>
+<br>
+
+![Diagrama conceitual de fila: enqueue no final e dequeue na frente](Docs/Conceitos/img/fila-fifo.svg)
 
 </details>
 

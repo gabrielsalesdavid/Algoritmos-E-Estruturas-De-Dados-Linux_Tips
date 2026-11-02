@@ -273,6 +273,8 @@ LIFO significa *Last In, First Out*: o último elemento inserido é o primeiro r
 
 FIFO significa *First In, First Out*: o primeiro elemento inserido é o primeiro removido. Em `src/PILHA E FILA/fila.py`, a classe `Fila` usa `collections.deque`; `enqueue()` acrescenta ao final, `dequeue()` remove e devolve o elemento do começo, e `peek()` consulta o próximo elemento sem removê-lo. `dequeue()` gera `IndexError` se a fila estiver vazia; `peek()` retorna `None` nesse caso.
 
+![Fila FIFO: enqueue no final e dequeue na frente](../Conceitos/img/fila-fifo.svg)
+
 ### Lista simplesmente ligada
 
 Cada nó guarda um dado e uma referência `proximo`. A lista mantém uma `cabeca` para o primeiro nó. Para chegar ao final ou localizar um valor, é necessário percorrer as referências a partir da cabeça.

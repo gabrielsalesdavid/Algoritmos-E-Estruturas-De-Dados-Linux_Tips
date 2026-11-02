@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Fila FIFO</title>
+  <desc id="desc">Diagrama de uma fila com A na frente e C no final. dequeue remove A pelo começo e enqueue acrescenta um item ao final.</desc>
+  <rect width="900" height="360" rx="18" fill="#f4f7fb"/>
+  <text x="450" y="48" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#183153">Fila — FIFO</text>
+  <text x="450" y="78" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#42566f">First In, First Out: o primeiro que entra é o primeiro que sai</text>
+  <text x="340" y="125" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#183153">FRENTE</text>
+  <text x="600" y="125" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#183153">FINAL</text>
+  <rect x="280" y="145" width="120" height="64" rx="8" fill="#b9e3ff" stroke="#2676a8" stroke-width="2"/>
+  <rect x="410" y="145" width="120" height="64" rx="8" fill="#d3e9f8" stroke="#2676a8" stroke-width="2"/>
+  <rect x="540" y="145" width="120" height="64" rx="8" fill="#e5eef5" stroke="#2676a8" stroke-width="2"/>
+  <text x="340" y="185" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" fill="#183153">A — primeiro</text>
+  <text x="470" y="185" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" fill="#183153">B</text>
+  <text x="600" y="185" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" fill="#183153">C — último</text>
+  <path d="M265 177H205" stroke="#b42318" stroke-width="4"/>
+  <path d="m215 167-14 10 14 10" fill="none" stroke="#b42318" stroke-width="4"/>
+  <text x="235" y="245" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#9f1d16">dequeue()</text>
+  <text x="235" y="269" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#9f1d16">remove A da frente</text>
+  <path d="M695 177H675" stroke="#15803d" stroke-width="4"/>
+  <path d="m685 167-14 10 14 10" fill="none" stroke="#15803d" stroke-width="4"/>
+  <text x="715" y="245" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#166534">enqueue(D)</text>
+  <text x="715" y="269" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#166534">adiciona D ao final</text>
+  <text x="450" y="320" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#52657a">Implementação didática em src/PILHA E FILA/fila.py</text>
+</svg>
