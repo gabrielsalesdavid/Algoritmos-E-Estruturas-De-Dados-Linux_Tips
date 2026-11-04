@@ -101,6 +101,19 @@ Em `O(n)`, a letra `n` representa a quantidade de dados. A notação ignora deta
 
 Dois laços aninhados nem sempre significam O(n²): é preciso olhar quantas vezes cada laço repete e qual tamanho de entrada cada um percorre. Mas quando ambos percorrem todos os `n` itens, o total pode se aproximar de `n × n`.
 
+### Aulas ao vivo e comparação entre custos
+
+Os arquivos na pasta [`src/AULAS AO VIVO`](../../src/AULAS%20AO%20VIVO) e [`src/BIG O NOTATION`](../../src/BIG%20O%20NOTATION) servem para ligar a teoria ao comportamento real de código pequeno:
+
+- [`aula-ao-vivo-1.py`](<../../src/AULAS AO VIVO/aula-ao-vivo-1.py>) percorre uma lista para descobrir o maior valor; o custo cresce linearmente com o número de itens.
+- [`aula-ao-vivo-2.py`](<../../src/AULAS AO VIVO/aula-ao-vivo-2.py>) gera combinações em um duplo laço; o número de pares cresce em proporção ao quadrado da quantidade de times.
+- [`o-n.py`](<../../src/BIG O NOTATION/o-n.py>) exemplifica busca linear em tempo `O(n)`.
+- [`o-logn.py`](<../../src/BIG O NOTATION/o-logn.py>) representa a busca binária em tempo `O(log n)`.
+- [`o-n-quadrado.py`](<../../src/BIG O NOTATION/o-n-quadrado.py>) mostra ordenação por comparação em `O(n²)`.
+- [`o-nlogn.py`](<../../src/BIG O NOTATION/o-nlogn.py>) mostra a estratégia de divisão e conquista em `O(n log n)`.
+
+A ideia central não é memorizar a fórmula, mas perceber que um algoritmo pode "olhar" menos dados ou mais dados conforme a maneira em que ele organiza a tarefa.
+
 ## 7. JSON: carregar e salvar um arquivo
 
 O exercício [`json-exemplo.py`](<../../src/DICIONÁRIOS E SETS/json-exemplo.py>) lê o arquivo `brasileirao.json` que está na mesma pasta do script. O desenho resume o caminho:
@@ -127,6 +140,8 @@ O script se chama `json-exemplo.py`, e não `json.py`, para que o nome local nã
 | Guardar itens por ordem de saída | `src/PILHA E FILA/pilhas.py` | Observe o caso de pilha vazia e o método `peek()` |
 | Conectar elementos | `src/LISTAS LIGADAS/listas-simples-ligadas.py` | Compare com `listas-duplamente-ligadas.py` |
 | Resolver um problema em chamadas menores | `src/RECURSÃO/recursao.py` | Compare o caso-base com a árvore em `caso-recursivo.py` |
+| Comparar custo de algoritmos | `src/BIG O NOTATION/o-n.py` | Explore também `o-logn.py`, `o-n-quadrado.py` e `o-nlogn.py` |
+| Reforçar conceitos com exercícios de aula | `src/AULAS AO VIVO/aula-ao-vivo-1.py` | Veja também `aula-ao-vivo-2.py` para o chaveamento |
 
 ## 9. Palavras que aparecem nos exemplos
 

@@ -311,6 +311,8 @@ Dois laços um dentro do outro podem comparar cada item de uma lista com cada it
 - **Conjuntos:** `src/DICIONÁRIOS E SETS/sets.py`.
 - **Dicionários e coleções combinadas:** `src/DICIONÁRIOS E SETS/dicionarios.py`, `dicioanrios-listas.py`.
 - **JSON:** `src/DICIONÁRIOS E SETS/json-exemplo.py` e `brasileirao.json`.
+- **Aulas ao vivo:** `src/AULAS AO VIVO/aula-ao-vivo-1.py` e `aula-ao-vivo-2.py`.
+- **Big O notation:** `src/BIG O NOTATION/o-n.py`, `o-logn.py`, `o-n-quadrado.py` e `o-nlogn.py`.
 - **Pilha e fila:** `src/PILHA E FILA/pilhas.py` e `src/PILHA E FILA/fila.py`.
 - **Listas ligadas:** `src/LISTAS LIGADAS/listas-simples-ligadas.py` e `listas-duplamente-ligadas.py`.
 - **Recursão e chamadas:** `src/RECURSÃO/recursao.py`, `caso-base.py`, `caso-recursivo.py`, `pilha-de-chamads.py` e `pilha-recursiva.py`.

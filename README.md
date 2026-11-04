@@ -40,6 +40,8 @@ Este material foi pensado para quem está começando. Não é necessário conhec
 | **Fila** | Atender itens na ordem em que chegaram: o primeiro colocado é o primeiro a sair. | [Fila FIFO](<src/PILHA E FILA/fila.py>) |
 | **Listas ligadas** | Conectar elementos por referências; cada elemento sabe onde está o próximo (e, na versão dupla, o anterior). | [Lista simples](<src/LISTAS LIGADAS/listas-simples-ligadas.py>), [lista dupla](<src/LISTAS LIGADAS/listas-duplamente-ligadas.py>) |
 | **Recursão** | Resolver uma tarefa com chamadas menores da mesma função até chegar a uma condição que manda parar. | [Contagem regressiva](<src/RECURSÃO/recursao.py>), [departamentos](<src/RECURSÃO/caso-recursivo.py>) |
+| **Big O** | Comparar como o esforço cresce em busca, ordenação e outras operações quando a quantidade de dados aumenta. | [linear](<src/BIG O NOTATION/o-n.py>), [logarítmica](<src/BIG O NOTATION/o-logn.py>), [quadrática](<src/BIG O NOTATION/o-n-quadrado.py>), [n log n](<src/BIG O NOTATION/o-nlogn.py>) |
+| **Aulas ao vivo** | Exercícios práticos de listas e chaveamento para reforçar os conceitos em contexto real de estudo. | [lista e maior valor](<src/AULAS AO VIVO/aula-ao-vivo-1.py>), [chaveamento](<src/AULAS AO VIVO/aula-ao-vivo-2.py>) |
 | **Crescimento do trabalho** | Comparar se uma tarefa continua simples ou exige cada vez mais passos conforme a quantidade de dados aumenta. | [Guia de conceitos](Docs/Conceitos/CONCEITOS.md#6-notação-o) |
 
 ### As ideias em imagens
@@ -119,6 +121,8 @@ Essas situações são exemplos conceituais, não uma classificação automátic
 │   └── Fundamentos/
 │       └── FUNDAMENTOS.md       # Guia de sintaxe e estruturas
 └── src/
+    ├── AULAS AO VIVO/           # exercícios de aula e reforço de listas
+    ├── BIG O NOTATION/         # exemplos de O(1), O(log n), O(n), O(n log n) e O(n²)
     ├── DICIONÁRIOS E SETS/      # set, dict, JSON e dados de exemplo
     ├── LISTAS/                  # listas, matrizes, iteração e operações
     ├── LISTAS LIGADAS/          # listas simplesmente e duplamente ligadas
@@ -154,6 +158,28 @@ Essas situações são exemplos conceituais, não uma classificação automátic
 | [`dicioanrios-listas.py`](<src/DICIONÁRIOS E SETS/dicioanrios-listas.py>) | Lista de dicionários, iteração e f-strings |
 | [`json-exemplo.py`](<src/DICIONÁRIOS E SETS/json-exemplo.py>) | Leitura e gravação de dados JSON com `pathlib` |
 | [`brasileirao.json`](<src/DICIONÁRIOS E SETS/brasileirao.json>) | Dados usados pelo exercício de JSON |
+
+</details>
+
+<details>
+<summary><strong>Aulas ao vivo e exercícios práticos</strong></summary>
+
+| Exemplo | Conceitos |
+| --- | --- |
+| [`aula-ao-vivo-1.py`](<src/AULAS AO VIVO/aula-ao-vivo-1.py>) | Listas, iteração e comparação entre itens para encontrar o maior valor |
+| [`aula-ao-vivo-2.py`](<src/AULAS AO VIVO/aula-ao-vivo-2.py>) | Chaveamento de times e duplo `for` para gerar combinações |
+
+</details>
+
+<details>
+<summary><strong>Big O e análise de eficiência</strong></summary>
+
+| Exemplo | Conceitos |
+| --- | --- |
+| [`o-n.py`](<src/BIG O NOTATION/o-n.py>) | Busca linear em tempo O(n) |
+| [`o-logn.py`](<src/BIG O NOTATION/o-logn.py>) | Busca binária em tempo O(log n) |
+| [`o-n-quadrado.py`](<src/BIG O NOTATION/o-n-quadrado.py>) | Ordenação por comparação com custo O(n²) |
+| [`o-nlogn.py`](<src/BIG O NOTATION/o-nlogn.py>) | Merge sort com custo O(n log n) |
 
 </details>
 
@@ -217,6 +243,20 @@ Os diagramas são **ilustrações conceituais** das estruturas, não capturas de
 ![Diagrama conceitual dos índices de uma lista Python](Docs/Conceitos/img/lista-indices.svg)
 
 </details>
+
+## 🖼️ Visão geral visual das mudanças
+
+A seguir, alguns diagramas do material didático que acompanham as explicações e ajudam a visualizar a lógica das estruturas:
+
+<div align="center">
+
+![Escolha entre lista, conjunto e dicionário](Docs/Conceitos/img/escolha-colecao.svg)
+
+![Passo a passo da recursão com contagem regressiva](Docs/Conceitos/img/recursao-passo-a-passo.svg)
+
+![Fluxo de leitura e gravação de dados JSON](Docs/Conceitos/img/leitura-json.svg)
+
+</div>
 
 ## 🚀 Comece a praticar
 
