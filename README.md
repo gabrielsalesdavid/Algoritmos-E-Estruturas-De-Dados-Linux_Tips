@@ -2,15 +2,16 @@
 
 # 🐍 Algoritmos e Estruturas de Dados com Python
 
-**Um espaço de estudos práticos para aprender Python e entender como os dados se organizam.**
+**Um espaço de estudos práticos para aprender Python, pensar em algoritmos e entender como os dados se organizam.**
 
-Exemplos comentados • conceitos fundamentais • estruturas de dados
+Exemplos comentados • teoria em português • visualizações didáticas
 
 <br>
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
 ![Foco](https://img.shields.io/badge/foco-aprendizado%20pr%C3%A1tico-2ea44f)
 ![Idioma](https://img.shields.io/badge/documenta%C3%A7%C3%A3o-Portugu%C3%AAs-8250df)
+![Status](https://img.shields.io/badge/status-estudo%20e%20pr%C3%A1tica-blue)
 
 </div>
 
@@ -18,9 +19,30 @@ Exemplos comentados • conceitos fundamentais • estruturas de dados
 
 ## 👋 Sobre o projeto
 
-Este repositório reúne exercícios introdutórios de **Python**, **algoritmos** e **estruturas de dados**. A proposta é aprender pela leitura e experimentação: cada exemplo mostra uma ideia pequena, e os comentários no código ajudam a entender a sintaxe, as operações e a lógica utilizada.
+Este repositório foi pensado como um ambiente de estudo para quem quer aprender **Python**, **algoritmos** e **estruturas de dados** de forma prática e gradual. A ideia é simples: cada script explora um conceito pequeno, com comentários claros e exemplos acessíveis para quem está começando.
 
-É um projeto de estudos em evolução — não um pacote pronto para produção. Alguns exercícios ainda têm limitações conhecidas, que estão descritas com transparência neste README para que iniciantes possam reconhecê-las e praticar a correção.
+O projeto combina:
+
+- fundamentos de Python
+- listas, dicionários, conjuntos e JSON
+- pilhas, filas e listas ligadas
+- recursão e pilha de chamadas
+- análise de eficiência com notação Big O
+- exercícios de reforço em aulas ao vivo
+
+É um material de estudo em evolução, com foco pedagógico e com transparência sobre limitações e erros conhecidos dos exemplos. O objetivo não é entregar um software pronto para produção, mas criar uma base sólida para compreender a lógica por trás das estruturas e dos algoritmos.
+
+## ✨ O que foi feito neste material
+
+Nos últimos ajustes, o repositório foi expandido para deixar o conteúdo mais completo e melhor organizado. Entre as melhorias, destacam-se:
+
+- inclusão de exemplos de **Big O** com buscas e ordenações em diferentes complexidades
+- criação de exercícios práticos em **Aulas ao Vivo** para reforçar o aprendizado
+- organização melhor dos documentos em **Fundamentos** e **Conceitos**
+- atualização do README para facilitar a navegação por tema e por exemplo
+- inclusão de diagramas e referências visuais que ajudam a compreender listas, pilhas, filas e recursão
+
+Essas mudanças tornam o estudo mais didático e ajudam a conectar a sintaxe de Python à lógica de organização e processamento de dados.
 
 ## 📖 O que você vai aprender, explicado com calma
 
@@ -67,6 +89,7 @@ As figuras de [índices](Docs/Conceitos/img/lista-indices.svg), [listas ligadas]
 | Funções, classes, métodos e `self` | Pilha LIFO e fila FIFO com `deque` |
 | Recursão, pilha de chamadas e f-strings | Listas simplesmente e duplamente ligadas |
 | Arquivos e módulo `json` | Busca, inserção e remoção |
+| Big O e análise de custo | Exemplos de eficiência e comparação entre algoritmos |
 
 ## 🧭 Trilha de aprendizagem
 
@@ -111,6 +134,8 @@ Essas situações são exemplos conceituais, não uma classificação automátic
 
 ## 🗺️ Organização do repositório
 
+Este projeto está organizado por tema para facilitar a leitura e a prática. Cada pasta concentra um conjunto de exercícios com foco em uma ideia específica:
+
 ```text
 .
 ├── README.md
@@ -131,6 +156,8 @@ Essas situações são exemplos conceituais, não uma classificação automátic
 ```
 
 ### Índice completo dos exemplos
+
+Abaixo está uma visão geral dos arquivos e dos temas principais tratados no repositório.
 
 <details>
 <summary><strong>Listas, matrizes e controle de fluxo</strong></summary>
@@ -246,7 +273,7 @@ Os diagramas são **ilustrações conceituais** das estruturas, não capturas de
 
 ## 🖼️ Visão geral visual das mudanças
 
-A seguir, alguns diagramas do material didático que acompanham as explicações e ajudam a visualizar a lógica das estruturas:
+A seguir, alguns diagramas do material didático que acompanham as explicações e ajudam a visualizar a lógica das estruturas e dos algoritmos:
 
 <div align="center">
 
@@ -257,6 +284,8 @@ A seguir, alguns diagramas do material didático que acompanham as explicações
 ![Fluxo de leitura e gravação de dados JSON](Docs/Conceitos/img/leitura-json.svg)
 
 </div>
+
+Esses recursos visuais fazem parte da proposta do projeto: conectar a teoria a imagens simples e didáticas, para que o conceito fique mais fácil de recordar mesmo sem conhecer toda a terminologia de antemão.
 
 ## 🚀 Comece a praticar
 
