@@ -279,6 +279,8 @@ FIFO significa *First In, First Out*: o primeiro elemento inserido é o primeiro
 
 Cada nó guarda um dado e uma referência `proximo`. A lista mantém uma `cabeca` para o primeiro nó. Para chegar ao final ou localizar um valor, é necessário percorrer as referências a partir da cabeça.
 
+No exercício [`aula-ao-vivo-3.py`](<../../src/AULAS AO VIVO/aula-ao-vivo-3.py>), a função `tamanho()` primeiro cria um nó para cada item recebido e depois percorre a lista para contar os nós. As duas passagens são lineares; portanto, o tempo total cresce como `O(n)`, e os nós ocupam espaço `O(n)`.
+
 ### Lista duplamente ligada
 
 Cada nó guarda referências `proximo` e `anterior`. A lista também mantém `cabeca` e `cauda`, facilitando a inserção no final. Ao remover um nó, as referências dos vizinhos e as extremidades precisam ser atualizadas.
@@ -303,6 +305,8 @@ Para comparar a ideia, imagine procurar um nome numa lista sem ordem: no pior ca
 
 Dois laços um dentro do outro podem comparar cada item de uma lista com cada item de outra. Se ambas tiverem `n` itens, o número de comparações pode se aproximar de `n × n`, ou O(n²). Isso não significa que todo laço duplo seja automaticamente lento; significa que é importante notar quantas repetições acontecem conforme os dados aumentam.
 
+Com três laços que percorrem `n` valores cada, o total pode chegar a `n × n × n`, ou O(n³), como ilustra `src/BIG O NOTATION/o-n-cubico.py`.
+
 ## 12. Mapa dos exemplos
 
 - **Listas:** `src/LISTAS/listas.py`, `tamanho-listas.py`, `adicionar-elementos.py`, `remover.py`.
@@ -311,8 +315,8 @@ Dois laços um dentro do outro podem comparar cada item de uma lista com cada it
 - **Conjuntos:** `src/DICIONÁRIOS E SETS/sets.py`.
 - **Dicionários e coleções combinadas:** `src/DICIONÁRIOS E SETS/dicionarios.py`, `dicioanrios-listas.py`.
 - **JSON:** `src/DICIONÁRIOS E SETS/json-exemplo.py` e `brasileirao.json`.
-- **Aulas ao vivo:** `src/AULAS AO VIVO/aula-ao-vivo-1.py` e `aula-ao-vivo-2.py`.
-- **Big O notation:** `src/BIG O NOTATION/o-n.py`, `o-logn.py`, `o-n-quadrado.py` e `o-nlogn.py`.
+- **Aulas ao vivo:** `src/AULAS AO VIVO/aula-ao-vivo-1.py`, `aula-ao-vivo-2.py` e `aula-ao-vivo-3.py`.
+- **Big O notation:** `src/BIG O NOTATION/o-n.py`, `o-logn.py`, `o-n-quadrado.py`, `o-nlogn.py` e `o-n-cubico.py`.
 - **Pilha e fila:** `src/PILHA E FILA/pilhas.py` e `src/PILHA E FILA/fila.py`.
 - **Listas ligadas:** `src/LISTAS LIGADAS/listas-simples-ligadas.py` e `listas-duplamente-ligadas.py`.
 - **Recursão e chamadas:** `src/RECURSÃO/recursao.py`, `caso-base.py`, `caso-recursivo.py`, `pilha-de-chamads.py` e `pilha-recursiva.py`.

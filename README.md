@@ -36,8 +36,8 @@ O projeto combina:
 
 Nos últimos ajustes, o repositório foi expandido para deixar o conteúdo mais completo e melhor organizado. Entre as melhorias, destacam-se:
 
-- inclusão de exemplos de **Big O** com buscas e ordenações em diferentes complexidades
-- criação de exercícios práticos em **Aulas ao Vivo** para reforçar o aprendizado
+- inclusão de exemplos de **Big O** com buscas, ordenações e três laços aninhados para ilustrar O(n³)
+- criação de exercícios práticos em **Aulas ao Vivo** para reforçar o aprendizado, incluindo a contagem de nós em uma lista ligada
 - organização melhor dos documentos em **Fundamentos** e **Conceitos**
 - atualização do README para facilitar a navegação por tema e por exemplo
 - inclusão de diagramas e referências visuais que ajudam a compreender listas, pilhas, filas e recursão
@@ -62,8 +62,8 @@ Este material foi pensado para quem está começando. Não é necessário conhec
 | **Fila** | Atender itens na ordem em que chegaram: o primeiro colocado é o primeiro a sair. | [Fila FIFO](<src/PILHA E FILA/fila.py>) |
 | **Listas ligadas** | Conectar elementos por referências; cada elemento sabe onde está o próximo (e, na versão dupla, o anterior). | [Lista simples](<src/LISTAS LIGADAS/listas-simples-ligadas.py>), [lista dupla](<src/LISTAS LIGADAS/listas-duplamente-ligadas.py>) |
 | **Recursão** | Resolver uma tarefa com chamadas menores da mesma função até chegar a uma condição que manda parar. | [Contagem regressiva](<src/RECURSÃO/recursao.py>), [departamentos](<src/RECURSÃO/caso-recursivo.py>) |
-| **Big O** | Comparar como o esforço cresce em busca, ordenação e outras operações quando a quantidade de dados aumenta. | [linear](<src/BIG O NOTATION/o-n.py>), [logarítmica](<src/BIG O NOTATION/o-logn.py>), [quadrática](<src/BIG O NOTATION/o-n-quadrado.py>), [n log n](<src/BIG O NOTATION/o-nlogn.py>) |
-| **Aulas ao vivo** | Exercícios práticos de listas e chaveamento para reforçar os conceitos em contexto real de estudo. | [lista e maior valor](<src/AULAS AO VIVO/aula-ao-vivo-1.py>), [chaveamento](<src/AULAS AO VIVO/aula-ao-vivo-2.py>) |
+| **Big O** | Comparar como o esforço cresce em busca, ordenação e outras operações quando a quantidade de dados aumenta. | [linear](<src/BIG O NOTATION/o-n.py>), [logarítmica](<src/BIG O NOTATION/o-logn.py>), [quadrática](<src/BIG O NOTATION/o-n-quadrado.py>), [n log n](<src/BIG O NOTATION/o-nlogn.py>), [cúbica](<src/BIG O NOTATION/o-n-cubico.py>) |
+| **Aulas ao vivo** | Exercícios práticos de listas, chaveamento e listas ligadas para reforçar os conceitos em contexto real de estudo. | [lista e maior valor](<src/AULAS AO VIVO/aula-ao-vivo-1.py>), [chaveamento](<src/AULAS AO VIVO/aula-ao-vivo-2.py>), [contagem de nós](<src/AULAS AO VIVO/aula-ao-vivo-3.py>) |
 | **Crescimento do trabalho** | Comparar se uma tarefa continua simples ou exige cada vez mais passos conforme a quantidade de dados aumenta. | [Guia de conceitos](Docs/Conceitos/CONCEITOS.md#6-notação-o) |
 
 ### As ideias em imagens
@@ -129,6 +129,7 @@ A notação **O (Big O)** descreve como o trabalho de um algoritmo tende a cresc
 | **O(log n)** | O trabalho cresce lentamente porque, a cada etapa, o espaço de busca pode ser reduzido. | Uma busca que divide repetidamente um conjunto ordenado ao meio. |
 | **O(n)** | O trabalho cresce junto com a quantidade de itens. | Percorrer uma lista inteira para procurar um valor. |
 | **O(n²)** | O trabalho pode crescer proporcionalmente ao quadrado da quantidade de itens. | Comparar cada item com todos os demais usando dois laços aninhados. |
+| **O(n³)** | O trabalho pode crescer proporcionalmente ao cubo da quantidade de itens. | Repetir uma operação para cada combinação de três índices, com três laços aninhados. |
 
 Essas situações são exemplos conceituais, não uma classificação automática de todos os arquivos deste repositório. A notação depende da operação analisada e das condições do algoritmo: por exemplo, a busca que reduz o espaço pela metade pressupõe dados ordenados e uma implementação adequada.
 
@@ -147,7 +148,7 @@ Este projeto está organizado por tema para facilitar a leitura e a prática. Ca
 │       └── FUNDAMENTOS.md       # Guia de sintaxe e estruturas
 └── src/
     ├── AULAS AO VIVO/           # exercícios de aula e reforço de listas
-    ├── BIG O NOTATION/         # exemplos de O(1), O(log n), O(n), O(n log n) e O(n²)
+    ├── BIG O NOTATION/         # exemplos de O(1), O(log n), O(n), O(n log n), O(n²) e O(n³)
     ├── DICIONÁRIOS E SETS/      # set, dict, JSON e dados de exemplo
     ├── LISTAS/                  # listas, matrizes, iteração e operações
     ├── LISTAS LIGADAS/          # listas simplesmente e duplamente ligadas
@@ -195,6 +196,7 @@ Abaixo está uma visão geral dos arquivos e dos temas principais tratados no re
 | --- | --- |
 | [`aula-ao-vivo-1.py`](<src/AULAS AO VIVO/aula-ao-vivo-1.py>) | Listas, iteração e comparação entre itens para encontrar o maior valor |
 | [`aula-ao-vivo-2.py`](<src/AULAS AO VIVO/aula-ao-vivo-2.py>) | Chaveamento de times e duplo `for` para gerar combinações |
+| [`aula-ao-vivo-3.py`](<src/AULAS AO VIVO/aula-ao-vivo-3.py>) | Criação de uma lista simplesmente ligada e contagem de seus nós |
 
 </details>
 
@@ -207,6 +209,7 @@ Abaixo está uma visão geral dos arquivos e dos temas principais tratados no re
 | [`o-logn.py`](<src/BIG O NOTATION/o-logn.py>) | Busca binária em tempo O(log n) |
 | [`o-n-quadrado.py`](<src/BIG O NOTATION/o-n-quadrado.py>) | Ordenação por comparação com custo O(n²) |
 | [`o-nlogn.py`](<src/BIG O NOTATION/o-nlogn.py>) | Merge sort com custo O(n log n) |
+| [`o-n-cubico.py`](<src/BIG O NOTATION/o-n-cubico.py>) | Três laços aninhados que ilustram custo O(n³) |
 
 </details>
 
@@ -335,8 +338,8 @@ Os exercícios ainda têm limitações descritas acima; execute somente depois d
 ## 📚 Documentação
 
 - **[Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md):** guia passo a passo de nomes e valores, tipos, listas, conjuntos, dicionários, condições, repetições, funções, classes, arquivos JSON, recursão, pilhas, filas e crescimento do trabalho.
-- **[Conceitos de algoritmos e estruturas de dados](Docs/Conceitos/CONCEITOS.md):** explica em linguagem simples como escolher coleções, como listas ligadas guardam conexões, como funcionam pilhas e filas, o que acontece durante a recursão e como entender O(1), O(n), O(n²) e O(log n).
-- **Comentários no código:** os 21 arquivos `.py` em `src/` incluem explicações em português das sintaxes e operações estudadas.
+- **[Conceitos de algoritmos e estruturas de dados](Docs/Conceitos/CONCEITOS.md):** explica em linguagem simples como escolher coleções, como listas ligadas guardam conexões, como funcionam pilhas e filas, o que acontece durante a recursão e como entender O(1), O(log n), O(n), O(n²) e O(n³).
+- **Comentários no código:** os arquivos `.py` em `src/` incluem explicações em português das sintaxes e operações estudadas.
 - **Diagramas:** os SVGs em `Docs/Conceitos/img/` ilustram índices, coleções, listas ligadas, pilhas, recursão e leitura/gravação JSON.
 
 ## 🔗 Como os assuntos se conectam

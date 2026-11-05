@@ -85,6 +85,7 @@ A notação O descreve como o custo de um algoritmo cresce em função da entrad
 - **O(log n):** crescimento logarítmico; a cada etapa, reduz-se substancialmente o espaço de busca.
 - **O(n):** crescimento linear, como percorrer uma lista para procurar um valor.
 - **O(n²):** crescimento quadrático, comum quando cada item é comparado com todos os demais por dois laços aninhados.
+- **O(n³):** crescimento cúbico, como repetir uma operação para cada combinação de três índices em três laços aninhados.
 
 Esses exemplos são referências gerais, não uma promessa de desempenho absoluto. Para estruturas e operações concretas deste repositório, consulte a tabela de custos em [Fundamentos](../Fundamentos/FUNDAMENTOS.md).
 
@@ -95,11 +96,14 @@ Imagine comparar o trabalho com uma lista pequena e outra cem vezes maior:
 - **O(1), constante:** a operação faz aproximadamente o mesmo número de passos, como pegar diretamente um item pela posição conhecida.
 - **O(n), linear:** pode ser necessário olhar cada item. Mais itens costumam significar proporcionalmente mais verificações.
 - **O(n²), quadrático:** para cada item, outro percurso pode olhar muitos itens. Se dobrar a quantidade, o trabalho pode crescer perto de quatro vezes.
+- **O(n³), cúbico:** três repetições que percorrem os `n` itens podem fazer o trabalho crescer perto de oito vezes quando a entrada dobra.
 - **O(log n), logarítmico:** cada passo reduz a busca, por exemplo pela metade. É o que pode acontecer ao procurar em uma lista ordenada usando busca binária; esse algoritmo não está implementado nos exemplos atuais.
 
 Em `O(n)`, a letra `n` representa a quantidade de dados. A notação ignora detalhes como modelo do computador, linguagem e pequenas diferenças entre comandos. Serve para comparar como soluções tendem a crescer quando recebem mais dados.
 
 Dois laços aninhados nem sempre significam O(n²): é preciso olhar quantas vezes cada laço repete e qual tamanho de entrada cada um percorre. Mas quando ambos percorrem todos os `n` itens, o total pode se aproximar de `n × n`.
+
+O exemplo [`o-n-cubico.py`](<../../src/BIG O NOTATION/o-n-cubico.py>) usa três laços que percorrem `n` valores cada; por isso, imprime `n × n × n` combinações e ilustra `O(n³)`.
 
 ### Aulas ao vivo e comparação entre custos
 
@@ -107,10 +111,12 @@ Os arquivos na pasta [`src/AULAS AO VIVO`](../../src/AULAS%20AO%20VIVO) e [`src/
 
 - [`aula-ao-vivo-1.py`](<../../src/AULAS AO VIVO/aula-ao-vivo-1.py>) percorre uma lista para descobrir o maior valor; o custo cresce linearmente com o número de itens.
 - [`aula-ao-vivo-2.py`](<../../src/AULAS AO VIVO/aula-ao-vivo-2.py>) gera combinações em um duplo laço; o número de pares cresce em proporção ao quadrado da quantidade de times.
+- [`aula-ao-vivo-3.py`](<../../src/AULAS AO VIVO/aula-ao-vivo-3.py>) constrói uma lista simplesmente ligada e percorre seus nós para contar os elementos; o custo total cresce linearmente com a quantidade de itens.
 - [`o-n.py`](<../../src/BIG O NOTATION/o-n.py>) exemplifica busca linear em tempo `O(n)`.
 - [`o-logn.py`](<../../src/BIG O NOTATION/o-logn.py>) representa a busca binária em tempo `O(log n)`.
 - [`o-n-quadrado.py`](<../../src/BIG O NOTATION/o-n-quadrado.py>) mostra ordenação por comparação em `O(n²)`.
 - [`o-nlogn.py`](<../../src/BIG O NOTATION/o-nlogn.py>) mostra a estratégia de divisão e conquista em `O(n log n)`.
+- [`o-n-cubico.py`](<../../src/BIG O NOTATION/o-n-cubico.py>) mostra três laços aninhados com `n` repetições cada, totalizando `O(n³)`.
 
 A ideia central não é memorizar a fórmula, mas perceber que um algoritmo pode "olhar" menos dados ou mais dados conforme a maneira em que ele organiza a tarefa.
 
@@ -140,8 +146,8 @@ O script se chama `json-exemplo.py`, e não `json.py`, para que o nome local nã
 | Guardar itens por ordem de saída | `src/PILHA E FILA/pilhas.py` | Observe o caso de pilha vazia e o método `peek()` |
 | Conectar elementos | `src/LISTAS LIGADAS/listas-simples-ligadas.py` | Compare com `listas-duplamente-ligadas.py` |
 | Resolver um problema em chamadas menores | `src/RECURSÃO/recursao.py` | Compare o caso-base com a árvore em `caso-recursivo.py` |
-| Comparar custo de algoritmos | `src/BIG O NOTATION/o-n.py` | Explore também `o-logn.py`, `o-n-quadrado.py` e `o-nlogn.py` |
-| Reforçar conceitos com exercícios de aula | `src/AULAS AO VIVO/aula-ao-vivo-1.py` | Veja também `aula-ao-vivo-2.py` para o chaveamento |
+| Comparar custo de algoritmos | `src/BIG O NOTATION/o-n.py` | Explore também `o-logn.py`, `o-n-quadrado.py`, `o-nlogn.py` e `o-n-cubico.py` |
+| Reforçar conceitos com exercícios de aula | `src/AULAS AO VIVO/aula-ao-vivo-1.py` | Veja também `aula-ao-vivo-2.py` para o chaveamento e `aula-ao-vivo-3.py` para a lista ligada |
 
 ## 9. Palavras que aparecem nos exemplos
 
