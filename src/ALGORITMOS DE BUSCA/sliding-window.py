@@ -13,5 +13,7 @@ def encontrar_soma_maxima(lista, k):
         if soma_atual > soma_maxima:
             soma_maxima = soma_atual
 
+    return soma_maxima
+
 lista = [2, 1, 5, 1, 3, 2]
 print(encontrar_soma_maxima(lista, 3))
