@@ -25,6 +25,7 @@ O projeto combina:
 
 - fundamentos de Python
 - listas, dicionários, conjuntos e JSON
+- tabelas hash, colisões, fator de carga e digest SHA-256
 - pilhas, filas e listas ligadas
 - recursão e pilha de chamadas
 - análise de eficiência com notação Big O
@@ -38,9 +39,10 @@ Nos últimos ajustes, o repositório foi expandido para deixar o conteúdo mais 
 
 - inclusão de exemplos de **Big O** com buscas, ordenações e três laços aninhados para ilustrar O(n³)
 - criação de exercícios práticos em **Aulas ao Vivo** para reforçar o aprendizado, incluindo a contagem de nós em uma lista ligada
+- inclusão de exemplos de **tabelas hash**, funções hash, colisões e fator de carga, com correções para alinhar os exemplos aos conceitos
 - organização melhor dos documentos em **Fundamentos** e **Conceitos**
 - atualização do README para facilitar a navegação por tema e por exemplo
-- inclusão de diagramas e referências visuais que ajudam a compreender listas, pilhas, filas e recursão
+- inclusão de diagramas e referências visuais que ajudam a compreender listas, pilhas, filas, recursão e tabelas hash
 
 Essas mudanças tornam o estudo mais didático e ajudam a conectar a sintaxe de Python à lógica de organização e processamento de dados.
 
@@ -57,6 +59,7 @@ Este material foi pensado para quem está começando. Não é necessário conhec
 | **Listas e matrizes** | Uma lista pode conter outras listas, como linhas e colunas de um tabuleiro ou de uma tabela. | [Matrizes](src/LISTAS/matrizes.py) |
 | **Conjuntos** | Guardar valores sem repeti-los e comparar grupos, por exemplo para encontrar elementos comuns. | [Conjuntos (`set`)](<src/DICIONÁRIOS E SETS/sets.py>) |
 | **Dicionários** | Guardar informações com rótulos: `"nome"` aponta para um nome, `"cidade"` aponta para uma cidade. | [Dicionários em listas](<src/DICIONÁRIOS E SETS/dicioanrios-listas.py>) |
+| **Tabelas hash** | Consultar valores por uma chave, entender colisões e calcular a ocupação de uma tabela. | [Tabela hash](<src/TABELAS HASH/tabela-hash.py>), [colisões](<src/TABELAS HASH/colisoes.py>), [fator de carga](<src/TABELAS HASH/fator-de-carga.py>) |
 | **JSON e arquivos** | Ler dados guardados em um arquivo, trabalhar com eles como listas e dicionários e gravar mudanças. | [Exemplo JSON](<src/DICIONÁRIOS E SETS/json-exemplo.py>) |
 | **Pilha** | Guardar itens de modo que o último colocado seja o primeiro a sair, como pratos empilhados. | [Pilha LIFO](<src/PILHA E FILA/pilhas.py>) |
 | **Fila** | Atender itens na ordem em que chegaram: o primeiro colocado é o primeiro a sair. | [Fila FIFO](<src/PILHA E FILA/fila.py>) |
@@ -76,9 +79,17 @@ As figuras abaixo são desenhos originais deste repositório para explicar as id
 
 ![Como os dados passam do arquivo JSON para Python e de volta](Docs/Conceitos/img/leitura-json.svg)
 
+![Fluxo conceitual de uma chave até o valor em uma tabela hash](Docs/Conceitos/img/tabela-hash.svg)
+
+![Duas chaves diferentes que colidem na mesma posição](Docs/Conceitos/img/colisoes-hash.svg)
+
+![Fator de carga: três itens ocupam três de oito posições](Docs/Conceitos/img/fator-carga-hash.svg)
+
 ![Como uma fila FIFO recebe itens no final e remove pelo começo](Docs/Conceitos/img/fila-fifo.svg)
 
 As figuras de [índices](Docs/Conceitos/img/lista-indices.svg), [listas ligadas](Docs/Conceitos/img/listas-ligadas.svg) e [pilha](Docs/Conceitos/img/pilha-lifo.svg) complementam os exemplos correspondentes.
+
+Os novos diagramas de [tabela hash](Docs/Conceitos/img/tabela-hash.svg), [colisões](Docs/Conceitos/img/colisoes-hash.svg) e [fator de carga](Docs/Conceitos/img/fator-carga-hash.svg) ilustram as consultas por chave e a ocupação da tabela.
 
 ### O que você vai encontrar
 
@@ -98,9 +109,10 @@ Uma ordem sugerida para explorar o conteúdo:
 1. **Conheça as sequências:** [listas e índices](src/LISTAS/listas.py), [tamanho](src/LISTAS/tamanho-listas.py), [adição](src/LISTAS/adicionar-elementos.py) e [remoção](src/LISTAS/remover.py).
 2. **Pratique a lógica:** [laço `for`](src/LISTAS/loop-for.py), [operações e filtros](src/LISTAS/operacoes-com-listas.py), [matrizes](src/LISTAS/matrizes.py) e [entrada interativa](src/LISTAS/adcionar.py).
 3. **Explore coleções:** [conjuntos (`set`)](src/DICION%C3%81RIOS%20E%20SETS/sets.py), [dicionários](src/DICION%C3%81RIOS%20E%20SETS/dicionarios.py), [listas de dicionários](src/DICION%C3%81RIOS%20E%20SETS/dicioanrios-listas.py) e [JSON](<src/DICIONÁRIOS E SETS/json-exemplo.py>).
-4. **Entenda pilhas, filas e estruturas ligadas:** [pilha LIFO](<src/PILHA E FILA/pilhas.py>), [fila FIFO](<src/PILHA E FILA/fila.py>), [lista simplesmente ligada](<src/LISTAS LIGADAS/listas-simples-ligadas.py>) e [lista duplamente ligada](<src/LISTAS LIGADAS/listas-duplamente-ligadas.py>).
-5. **Explore recursão:** [contagem regressiva](<src/RECURSÃO/recursao.py>), [caso-base](<src/RECURSÃO/caso-base.py>), [árvore de departamentos](<src/RECURSÃO/caso-recursivo.py>) e [pilha de chamadas](<src/RECURSÃO/pilha-de-chamads.py>).
-6. **Aprofunde os conceitos:** consulte [Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md), [Conceitos de algoritmos e estruturas de dados](Docs/Conceitos/CONCEITOS.md) e os diagramas visuais.
+4. **Estude tabelas hash:** [consulta por chave](<src/TABELAS HASH/tabela-hash.py>), [função hash e SHA-256](<src/TABELAS HASH/funcoes-hash.py>), [colisões](<src/TABELAS HASH/colisoes.py>) e [fator de carga](<src/TABELAS HASH/fator-de-carga.py>).
+5. **Entenda pilhas, filas e estruturas ligadas:** [pilha LIFO](<src/PILHA E FILA/pilhas.py>), [fila FIFO](<src/PILHA E FILA/fila.py>), [lista simplesmente ligada](<src/LISTAS LIGADAS/listas-simples-ligadas.py>) e [lista duplamente ligada](<src/LISTAS LIGADAS/listas-duplamente-ligadas.py>).
+6. **Explore recursão:** [contagem regressiva](<src/RECURSÃO/recursao.py>), [caso-base](<src/RECURSÃO/caso-base.py>), [árvore de departamentos](<src/RECURSÃO/caso-recursivo.py>) e [pilha de chamadas](<src/RECURSÃO/pilha-de-chamads.py>).
+7. **Aprofunde os conceitos:** consulte [Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md), [Conceitos de algoritmos e estruturas de dados](Docs/Conceitos/CONCEITOS.md) e os diagramas visuais.
 
 > **Dica para iniciantes:** leia primeiro os comentários, execute um exemplo por vez e experimente alterar os dados de entrada. Quando um arquivo tiver uma limitação conhecida, consulte [Antes de executar todos os exemplos](#-antes-de-executar-todos-os-exemplos).
 
@@ -116,6 +128,7 @@ Cada estrutura organiza os dados de um jeito diferente. A escolha depende do tip
 | **Lista ligada** | Cada nó guarda um valor e uma referência para outro nó; na versão dupla, também guarda a referência anterior. | Estudar como conexões entre elementos podem ser representadas e percorridas. | É uma estrutura implementada nos exemplos para fins didáticos; listas Python já oferecem operações próprias para uso cotidiano. |
 | **Pilha** | Segue a regra LIFO: o último item inserido é o primeiro removido. | Modelar ações como desfazer operações ou acompanhar chamadas de funções. | O exemplo usa `deque` como base e apresenta operações de pilha. |
 | **Fila** | Segue a regra FIFO: o primeiro item inserido é o primeiro removido. | Processar tarefas ou atendimentos na ordem de chegada. | O exemplo usa `deque`, adiciona itens no final e remove pelo começo. |
+| **Tabela hash** | Relaciona chaves a valores para permitir consultas eficientes. | Localizar rapidamente um registro por um identificador, como um SKU. | `dict` e `set` usam hash por baixo; colisões são tratadas pela implementação. O custo de consulta costuma ser O(1) em média, não uma garantia de tempo instantâneo. |
 
 Uma forma simples de decidir é perguntar: **preciso de posições, de itens únicos ou de uma consulta por chave?** Para posições, considere uma lista; para unicidade e operações entre grupos, um conjunto; para relacionar identificadores e informações, um dicionário. Pilhas e listas ligadas aparecem nos exemplos para explorar regras e referências específicas.
 
@@ -142,7 +155,7 @@ Este projeto está organizado por tema para facilitar a leitura e a prática. Ca
 ├── README.md
 ├── Docs/
 │   ├── Conceitos/
-│   │   ├── CONCEITOS.md         # Estruturas, recursão e notação O
+│   │   ├── CONCEITOS.md         # Estruturas, recursão, hash e notação O
 │   │   └── img/                 # Diagramas conceituais em SVG
 │   └── Fundamentos/
 │       └── FUNDAMENTOS.md       # Guia de sintaxe e estruturas
@@ -153,7 +166,8 @@ Este projeto está organizado por tema para facilitar a leitura e a prática. Ca
     ├── LISTAS/                  # listas, matrizes, iteração e operações
     ├── LISTAS LIGADAS/          # listas simplesmente e duplamente ligadas
     ├── PILHA E FILA/            # exemplos de pilha LIFO e fila FIFO com deque
-    └── RECURSÃO/                # casos-base, recursão e chamadas de funções
+    ├── RECURSÃO/                # casos-base, recursão e chamadas de funções
+    └── TABELAS HASH/            # hash, dicionários, colisões e fator de carga
 ```
 
 ### Índice completo dos exemplos
@@ -186,6 +200,18 @@ Abaixo está uma visão geral dos arquivos e dos temas principais tratados no re
 | [`dicioanrios-listas.py`](<src/DICIONÁRIOS E SETS/dicioanrios-listas.py>) | Lista de dicionários, iteração e f-strings |
 | [`json-exemplo.py`](<src/DICIONÁRIOS E SETS/json-exemplo.py>) | Leitura e gravação de dados JSON com `pathlib` |
 | [`brasileirao.json`](<src/DICIONÁRIOS E SETS/brasileirao.json>) | Dados usados pelo exercício de JSON |
+
+</details>
+
+<details>
+<summary><strong>Tabelas hash</strong></summary>
+
+| Exemplo | Conceitos |
+| --- | --- |
+| [`tabela-hash.py`](<src/TABELAS HASH/tabela-hash.py>) | Dicionário como tabela hash e consulta de produto por SKU |
+| [`funcoes-hash.py`](<src/TABELAS HASH/funcoes-hash.py>) | Digest SHA-256 de um payload JSON; diferente do hash interno de `dict` |
+| [`colisoes.py`](<src/TABELAS HASH/colisoes.py>) | Colisões de hash e comparação de chaves com `__eq__` |
+| [`fator-de-carga.py`](<src/TABELAS HASH/fator-de-carga.py>) | Razão entre itens armazenados e capacidade da tabela |
 
 </details>
 
@@ -339,8 +365,9 @@ Os exercícios ainda têm limitações descritas acima; execute somente depois d
 
 - **[Fundamentos de Python e estruturas de dados](Docs/Fundamentos/FUNDAMENTOS.md):** guia passo a passo de nomes e valores, tipos, listas, conjuntos, dicionários, condições, repetições, funções, classes, arquivos JSON, recursão, pilhas, filas e crescimento do trabalho.
 - **[Conceitos de algoritmos e estruturas de dados](Docs/Conceitos/CONCEITOS.md):** explica em linguagem simples como escolher coleções, como listas ligadas guardam conexões, como funcionam pilhas e filas, o que acontece durante a recursão e como entender O(1), O(log n), O(n), O(n²) e O(n³).
+- **Tabelas hash:** os exemplos em [`src/TABELAS HASH`](<src/TABELAS HASH>) exploram consulta por chave, colisões, fator de carga e o digest SHA-256 de um JSON. O guia de [Conceitos](Docs/Conceitos/CONCEITOS.md#7-tabelas-hash-dicionários-e-colisões) diferencia o hash de coleções do hash criptográfico.
 - **Comentários no código:** os arquivos `.py` em `src/` incluem explicações em português das sintaxes e operações estudadas.
-- **Diagramas:** os SVGs em `Docs/Conceitos/img/` ilustram índices, coleções, listas ligadas, pilhas, recursão e leitura/gravação JSON.
+- **Diagramas:** os SVGs em `Docs/Conceitos/img/` ilustram índices, coleções, listas ligadas, pilhas, recursão, leitura/gravação JSON e tabelas hash.
 
 ## 🔗 Como os assuntos se conectam
 

@@ -120,7 +120,25 @@ Os arquivos na pasta [`src/AULAS AO VIVO`](../../src/AULAS%20AO%20VIVO) e [`src/
 
 A ideia central não é memorizar a fórmula, mas perceber que um algoritmo pode "olhar" menos dados ou mais dados conforme a maneira em que ele organiza a tarefa.
 
-## 7. JSON: carregar e salvar um arquivo
+## 7. Tabelas hash, dicionários e colisões
+
+Uma tabela hash relaciona uma **chave** a um **valor**. Uma função hash transforma a chave em um valor usado para localizar onde guardar ou procurar o par. Em Python, `dict` e `set` usam tabelas hash por baixo; o programa consulta a coleção pela chave, sem calcular ou escolher manualmente uma posição.
+
+No exemplo [`tabela-hash.py`](<../../src/TABELAS HASH/tabela-hash.py>), um catálogo usa o SKU como chave para encontrar os dados do produto. A consulta com `dict.get()` tem custo médio `O(1)`, mas isso não significa tempo zero nem garante esse custo em todos os casos.
+
+![Fluxo conceitual de uma chave até o valor em uma tabela hash](img/tabela-hash.svg)
+
+Uma **colisão** acontece quando chaves diferentes chegam à mesma posição. A tabela precisa lidar com isso e ainda distinguir as chaves: em Python, chaves com o mesmo hash são comparadas com igualdade (`__eq__`). O arquivo [`colisoes.py`](<../../src/TABELAS HASH/colisoes.py>) força hashes iguais para mostrar essa situação. Na prática, a implementação de `dict` gerencia colisões; a figura ilustra o conceito, não os detalhes internos do Python.
+
+![Duas chaves diferentes que colidem na mesma posição](img/colisoes-hash.svg)
+
+O **fator de carga** é a razão entre a quantidade de itens e a capacidade da tabela (`α = n / m`). Um valor maior indica uma tabela mais ocupada e pode aumentar a chance de colisões. A forma de tratar colisões e redimensionar a tabela afeta a interpretação desse valor; Python gerencia sua capacidade internamente, então ela não é consultada pelo exemplo.
+
+![Exemplo de fator de carga com três itens em oito posições](img/fator-carga-hash.svg)
+
+O arquivo [`fator-de-carga.py`](<../../src/TABELAS HASH/fator-de-carga.py>) calcula essa razão com valores didáticos. Já [`funcoes-hash.py`](<../../src/TABELAS HASH/funcoes-hash.py>) calcula um digest SHA-256 de um JSON ordenado. Esse digest criptográfico é diferente do hash interno usado para localizar chaves em um dicionário e, sozinho, não é uma assinatura digital.
+
+## 8. JSON: carregar e salvar um arquivo
 
 O exercício [`json-exemplo.py`](<../../src/DICIONÁRIOS E SETS/json-exemplo.py>) lê o arquivo `brasileirao.json` que está na mesma pasta do script. O desenho resume o caminho:
 
@@ -136,20 +154,21 @@ O passo 5 substitui o conteúdo existente. O exercício verifica se o título qu
 
 O script se chama `json-exemplo.py`, e não `json.py`, para que o nome local não esconda o módulo padrão `json` quando Python tentar importá-lo.
 
-## 8. Como navegar pelos exemplos
+## 9. Como navegar pelos exemplos
 
 | Se quer entender... | Comece por... | Depois experimente... |
 | --- | --- | --- |
 | Posições numa sequência | `src/LISTAS/listas.py` | `tamanho-listas.py`, `adicionar-elementos.py` e `remover.py` |
 | Repetir instruções | `src/LISTAS/loop-for.py` | `operacoes-com-listas.py` e `matrizes.py` |
 | Escolher entre grupos e fichas | `src/DICIONÁRIOS E SETS/sets.py` | `dicioanrios-listas.py` e `json-exemplo.py` |
+| Consultar valores por chave e estudar colisões | `src/TABELAS HASH/tabela-hash.py` | `funcoes-hash.py`, `colisoes.py` e `fator-de-carga.py` |
 | Guardar itens por ordem de saída | `src/PILHA E FILA/pilhas.py` | Observe o caso de pilha vazia e o método `peek()` |
 | Conectar elementos | `src/LISTAS LIGADAS/listas-simples-ligadas.py` | Compare com `listas-duplamente-ligadas.py` |
 | Resolver um problema em chamadas menores | `src/RECURSÃO/recursao.py` | Compare o caso-base com a árvore em `caso-recursivo.py` |
 | Comparar custo de algoritmos | `src/BIG O NOTATION/o-n.py` | Explore também `o-logn.py`, `o-n-quadrado.py`, `o-nlogn.py` e `o-n-cubico.py` |
 | Reforçar conceitos com exercícios de aula | `src/AULAS AO VIVO/aula-ao-vivo-1.py` | Veja também `aula-ao-vivo-2.py` para o chaveamento e `aula-ao-vivo-3.py` para a lista ligada |
 
-## 9. Palavras que aparecem nos exemplos
+## 10. Palavras que aparecem nos exemplos
 
 | Palavra | Significado em linguagem simples |
 | --- | --- |
@@ -164,6 +183,9 @@ O script se chama `json-exemplo.py`, e não `json.py`, para que o nome local nã
 | **Caso-base** | A regra que faz uma função recursiva parar de chamar a si mesma. |
 | **Pilha de chamadas** | A lista interna de tarefas que Python ainda precisa terminar quando funções chamam outras funções. |
 | **JSON** | Um formato de texto para guardar informações de forma organizada e trocar esses dados entre programas. |
+| **Hash** | Um valor calculado a partir de uma chave para apoiar sua localização em uma tabela hash. |
+| **Colisão** | Quando chaves diferentes produzem o mesmo hash ou apontam para a mesma posição da tabela. |
+| **Fator de carga** | A razão entre a quantidade de itens armazenados e a capacidade da tabela hash. |
 | **O(n)** | Uma forma curta de dizer que o trabalho pode crescer junto com a quantidade de itens `n`. |
 
 Quando surgir outra palavra nova, use os exemplos como contexto: observe que dado entra, qual ação é feita e qual resultado sai. O objetivo não é decorar nomes, mas conseguir explicar o que o programa faz.

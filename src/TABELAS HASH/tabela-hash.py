@@ -12,8 +12,8 @@ produto_buscado = "SKU202"
 
 resultado = catalogo_produtos.get(produto_buscado)
 
-if resultado:
-    print(f"Produto Encontrado Instantaneamente: {resultado['nome']} - R$ {resultado['preco']}")
+if resultado is not None:
+    print(f"Produto encontrado: {resultado['nome']} - R$ {resultado['preco']}")
 else:
     print("Produto não localizado.")
 

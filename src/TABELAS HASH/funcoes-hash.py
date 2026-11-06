@@ -13,6 +13,6 @@ payload_pix = {
 payload_str = json.dumps(payload_pix, sort_keys = True)
 hash_sha256 = hashlib.sha256(payload_str.encode()).hexdigest()
 
-print("--- ASSINATURA SHA-256 DO PAYLOAD ---")
+print("--- DIGEST SHA-256 DO PAYLOAD ---")
 print("Payload: ", payload_str)
 print("Hash: ", hash_sha256)

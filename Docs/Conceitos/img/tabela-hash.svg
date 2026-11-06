@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="390" viewBox="0 0 960 390" role="img" aria-labelledby="title desc">
+  <title id="title">Consulta por chave em uma tabela hash</title>
+  <desc id="desc">Uma chave SKU202 passa por uma função hash e leva ao valor com os dados do produto no dicionário.</desc>
+  <rect width="960" height="390" rx="20" fill="#f4f7fb"/>
+  <text x="480" y="52" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#183153">Como uma tabela hash encontra um valor</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="45" y="132" width="190" height="112" rx="15" fill="#dceeff" stroke="#2676a8" stroke-width="3"/>
+    <text x="140" y="171" text-anchor="middle" font-size="17" font-weight="700" fill="#183153">CHAVE</text>
+    <text x="140" y="211" text-anchor="middle" font-size="24" fill="#183153">"SKU202"</text>
+    <path d="M238 188H300" stroke="#52657a" stroke-width="4"/>
+    <path d="m290 178 14 10-14 10" fill="none" stroke="#52657a" stroke-width="4"/>
+    <rect x="310" y="132" width="220" height="112" rx="15" fill="#e9ddff" stroke="#7043a5" stroke-width="3"/>
+    <text x="420" y="171" text-anchor="middle" font-size="17" font-weight="700" fill="#183153">FUNÇÃO HASH</text>
+    <text x="420" y="211" text-anchor="middle" font-size="19" fill="#183153">calcula uma posição</text>
+    <path d="M533 188H595" stroke="#52657a" stroke-width="4"/>
+    <path d="m585 178 14 10-14 10" fill="none" stroke="#52657a" stroke-width="4"/>
+    <rect x="605" y="112" width="310" height="154" rx="15" fill="#d9f2e6" stroke="#21845a" stroke-width="3"/>
+    <text x="760" y="148" text-anchor="middle" font-size="17" font-weight="700" fill="#183153">TABELA / DICIONÁRIO</text>
+    <text x="630" y="187" font-size="17" fill="#183153">"SKU101" → Teclado</text>
+    <rect x="621" y="198" width="278" height="31" rx="7" fill="#fff3cd"/>
+    <text x="630" y="220" font-size="17" font-weight="700" fill="#183153">"SKU202" → Mouse sem fio</text>
+    <text x="630" y="251" font-size="17" fill="#183153">"SKU303" → Monitor</text>
+  </g>
+  <text x="480" y="320" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#52657a">A chave identifica o valor; o dicionário gerencia a busca e os detalhes internos.</text>
+  <text x="480" y="350" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#52657a">Ilustração conceitual — não representa posições internas exatas do dict em Python.</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="390" viewBox="0 0 960 390" role="img" aria-labelledby="title desc">
+  <title id="title">Fator de carga de uma tabela hash</title>
+  <desc id="desc">Três posições ocupadas em uma tabela com oito posições resultam em fator de carga igual a três oitavos ou 0,375.</desc>
+  <rect width="960" height="390" rx="20" fill="#f4f7fb"/>
+  <text x="480" y="52" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#183153">Fator de carga: quanto da tabela está ocupado?</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="480" y="105" text-anchor="middle" font-size="21" font-weight="700" fill="#183153">α = itens armazenados / capacidade = n / m</text>
+    <g stroke="#2676a8" stroke-width="2">
+      <rect x="144" y="150" width="84" height="75" rx="8" fill="#b9e3ff"/>
+      <rect x="232" y="150" width="84" height="75" rx="8" fill="#b9e3ff"/>
+      <rect x="320" y="150" width="84" height="75" rx="8" fill="#b9e3ff"/>
+      <rect x="408" y="150" width="84" height="75" rx="8" fill="#fff"/>
+      <rect x="496" y="150" width="84" height="75" rx="8" fill="#fff"/>
+      <rect x="584" y="150" width="84" height="75" rx="8" fill="#fff"/>
+      <rect x="672" y="150" width="84" height="75" rx="8" fill="#fff"/>
+      <rect x="760" y="150" width="84" height="75" rx="8" fill="#fff"/>
+    </g>
+    <g text-anchor="middle" font-size="17" fill="#183153">
+      <text x="186" y="195">item</text><text x="274" y="195">item</text><text x="362" y="195">item</text>
+      <text x="450" y="195">vazio</text><text x="538" y="195">vazio</text><text x="626" y="195">vazio</text><text x="714" y="195">vazio</text><text x="802" y="195">vazio</text>
+    </g>
+    <text x="480" y="273" text-anchor="middle" font-size="23" font-weight="700" fill="#183153">n = 3  •  m = 8  •  α = 3/8 = 0,375 (37,5%)</text>
+  </g>
+  <text x="480" y="323" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#52657a">Maior ocupação pode elevar a chance de colisões; a estratégia de resolução e o redimensionamento também importam.</text>
+  <text x="480" y="353" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#52657a">Tabela ilustrativa: a capacidade interna de dict em Python não é exposta neste exemplo.</text>
+</svg>
